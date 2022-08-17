@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import Switch from 'react-switch';
+import { ThemeContext } from 'styled-components';
+import { useContext } from 'react';
 
 // Style
-const Container = styled.div`
+const ContainerNav = styled.div`
 display: flex;
 background-color: ${props => props.theme.colors.backgroundNav};
 color: #000;
@@ -20,24 +23,59 @@ const LinksBox = styled.div`
 display: flex;
 justify-content: right;
 width: 100%;
-background: #000;
 `;
 
 const Link = styled.a`
 color: ${props => props.theme.colors.links};
+font: 14px 'Montserrat';
+margin-right: 2rem;
+transition: .8s ease-in;
+  &:hover {
+    color: ${props => props.theme.colors.primary}
+  }
 `;
 
+const BoxToggle = styled.div`
+display: flex;
+align-items: center;
+`;
+
+interface Props {
+  toggleTheme(): void;
+}
+
 // Component
-const NavBar: React.FC = () => {
+const NavBar: React.FC<Props> = ({ toggleTheme }) => {
+  const {colors, title} = useContext(ThemeContext);
+
   return (
     <nav>
-      <Container>
+      <ContainerNav>
         <BrandTitle>Teste</BrandTitle>
 
         <LinksBox>
           <Link href="/">Home</Link>
+
+          <Link href="#about">Sobre</Link>
         </LinksBox>
-      </Container>
+
+        <BoxToggle>
+          <Switch
+          onChange={toggleTheme}
+          checked={title === 'dark'}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={20}
+          width={40}
+          handleDiameter={20}
+          offColor={colors.primary}
+          onColor={colors.secundary}
+          
+          />
+        </BoxToggle>
+
+
+      </ContainerNav>
     </nav>
   );
 }
