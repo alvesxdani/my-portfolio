@@ -22,5 +22,11 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "files": [
+    "src/components/themes/styled.d.ts"
+  ],
+  "import/no-anonymous-default-export": [2, {
+    "allowObject": true
+  }]
 }

@@ -1,16 +1,19 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { ThemeProvider } from 'react-bootstrap';
-import GlobalStyle from './components/global';
-import NavBar from './components/nav';
+import GlobalStyle from './components/themes/global';
+import NavBar from './components/nav/nav';
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import light from './components/themes/light';
+
 
 function App() {
   return (
-  <ThemeProvider breakpoints={['sm','md','lg']} minBreakpoint="sm">
-    <header>
-      <GlobalStyle />
-      <NavBar/>
-    </header>
-  </ThemeProvider>
+    <ThemeProvider theme={light}>
+      <header>
+        <GlobalStyle />
+        <NavBar/>
+        Teste
+      </header>
+    </ThemeProvider>
   );
 }
 
