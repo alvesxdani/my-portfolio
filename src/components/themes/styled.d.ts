@@ -9,7 +9,7 @@ declare module 'styled-components' {
       background: string,
       backgroundNav: string,
       text: string,
-      links: string
+      link: string
     },
   }
 };

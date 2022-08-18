@@ -1,44 +1,7 @@
-import styled from 'styled-components';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { useContext } from 'react';
-
-// Style
-const ContainerNav = styled.div`
-display: flex;
-background-color: ${props => props.theme.colors.backgroundNav};
-color: #000;
-font: 1rem 'Montserrat',sans-serif;
-padding: 1rem;
-align-items: center;
-}
-`;
-
-const BrandTitle = styled.div`
-font: bold 1.5rem 'Nunito',sans-serif;
-color: ${props => props.theme.colors.primary};
-`;
-
-const LinksBox = styled.div`
-display: flex;
-justify-content: right;
-width: 100%;
-`;
-
-const Link = styled.a`
-color: ${props => props.theme.colors.links};
-font: 14px 'Montserrat';
-margin-right: 2rem;
-transition: .8s ease-in;
-  &:hover {
-    color: ${props => props.theme.colors.primary}
-  }
-`;
-
-const BoxToggle = styled.div`
-display: flex;
-align-items: center;
-`;
+import { BoxToggle, BrandTitle, ContainerNav, Link, LinksBox } from './style';
 
 interface Props {
   toggleTheme(): void;
@@ -51,12 +14,18 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <nav>
       <ContainerNav>
-        <BrandTitle>Teste</BrandTitle>
+        <BrandTitle>Daniela Moreira</BrandTitle>
 
         <LinksBox>
           <Link href="/">Home</Link>
 
           <Link href="#about">Sobre</Link>
+
+          <Link href="#skills">Skills</Link>
+
+          <Link href="#projects">Projetos</Link>
+
+          <Link href="#contact">Contato</Link>
         </LinksBox>
 
         <BoxToggle>
@@ -67,10 +36,11 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
           uncheckedIcon={false}
           height={20}
           width={40}
-          handleDiameter={20}
-          offColor={colors.primary}
-          onColor={colors.secundary}
-          
+          handleDiameter={25}
+          offColor={colors.secundary}
+          onColor="#eee"
+          onHandleColor={colors.secundary}
+          offHandleColor="#fff"
           />
         </BoxToggle>
 
