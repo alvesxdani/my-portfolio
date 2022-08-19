@@ -2,6 +2,9 @@ import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { useContext } from 'react';
 import { BoxToggle, BrandTitle, ContainerNav, Link, LinksBox } from './style';
+import { BiHome, BiCodeAlt } from 'react-icons/bi';
+import { BsFillPersonFill, BsFillChatLeftFill } from 'react-icons/bs';
+import { MdWorkOutline } from 'react-icons/md';
 
 interface Props {
   toggleTheme(): void;
@@ -17,15 +20,30 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
         <BrandTitle>Daniela Moreira</BrandTitle>
 
         <LinksBox>
-          <Link href="/">Home</Link>
+          <Link href="/">
+          <BiHome/> 
+          <span>Home</span>
+          </Link>
 
-          <Link href="#about">Sobre</Link>
+          <Link href="#about">
+            <BsFillPersonFill/> 
+            <span>Sobre</span>
+          </Link>
 
-          <Link href="#skills">Skills</Link>
+          <Link href="#skills">
+            <BiCodeAlt/>
+            <span>Skills</span>
+          </Link>
 
-          <Link href="#projects">Projetos</Link>
+          <Link href="#projects">
+            <MdWorkOutline/>
+            <span>Projetos</span>
+          </Link>
 
-          <Link href="#contact">Contato</Link>
+          <Link href="#contact">
+            <BsFillChatLeftFill/>
+            <span>Contato</span>
+          </Link>
         </LinksBox>
 
         <BoxToggle>
