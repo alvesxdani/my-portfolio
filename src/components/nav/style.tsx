@@ -7,60 +7,54 @@ width: 100%;
 height: 7rem;
 display: flex;
 flex-direction: row;
-background-color: ${props => props.theme.colors.backgroundNav};
+background-color: ${(props) => props.theme.colors.backgroundNav};
 color: #000;
 font: 1rem 'Montserrat',sans-serif;
 align-items: center;
 margin-bottom: 1rem;
 
-  @media(max-width: 900px) {
-    position: fixed;
-    margin-right: 150px;
-    transition: .5s ease-in;
-    align-items: center;
-    width: 60px;
-    height: 100vh;
-    flex-direction: column;
-    padding: 1rem;
-  }
-}
+// @media(max-width: 900px) {
+
+// }
 `;
 
 export const BrandTitle = styled.div`
-flex-shrink: 0;
-font: bold 2rem 'Nunito',sans-serif;
-margin-left: 3rem;
-color: ${props => props.theme.colors.secundary};
+  flex-shrink: 0;
+  font: bold 2rem "Nunito", sans-serif;
+  margin-left: 3rem;
+  color: ${(props) => props.theme.colors.secundary};
   @media(max-width: 900px) {
-    font-size: 1.5rem;
-    margin: 0 0 4rem 0;
-    align-items: center;
-    text-align: center;
+    flex-grow:2;
   }
 `;
 
 export const LinksBox = styled.div`
-display: flex;
-justify-content: right;
-margin-right: 2rem;
-width: 100%;
-background: #000;
+  display: flex;
+  justify-content: right;
+  margin-right: 2rem;
+  width: 100%;
+
   @media(max-width: 900px) {
-    justify-content: center;
-    height: 100vh;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    align-items: center;
     flex-direction: column;
-    margin: 0;
+    padding: 1rem;
+    border-radius:  2rem 2rem 0 0;
+    background: ${props => props.theme.colors.backgroundNav};
   }
 `;
 
 export const Link = styled.a`
-display: flex;
-align-items: center;
-color: ${props => props.theme.colors.primary};
-margin-right: 2rem;
-transition: .8s ease-in;
+  display: flex;
+  align-items: center;
+  color: ${(props) => props.theme.colors.primary};
+  margin-right: 2rem;
+  transition: 0.8s ease-in;
   span {
-    font: 14px 'Montserrat';
+    font: 14px "Montserrat";
     font-weight: 600;
   }
   svg {
@@ -68,29 +62,37 @@ transition: .8s ease-in;
     margin-right: 1rem;
   }
   &:hover {
-    color: ${props => props.theme.colors.secundary}
+    color: ${(props) => props.theme.colors.secundary};
   }
 
   @media(max-width: 900px) {
-    margin: 0 0 4rem 0;
-    text-align: center;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const ButtonMinNav = styled.button`
+  display: none;
+
+  @media (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    background: ${(props) => props.theme.colors.backgroundNav};
+    color: ${(props) => props.theme.colors.text};
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    border: 1px solid ${(props) => props.theme.colors.third};
 
     svg {
-      font-size: 2.5rem;
-    }
-    
-    span {
-      display: none;
+      font-size: 2rem;
     }
   }
 `;
 
+
 export const BoxToggle = styled.div`
-display: flex;
-align-items: center;
-margin-right: 2rem;
-@media(max-width: 900px) {
-  width: 100%;
-  justify-content: center;
-}
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
 `;

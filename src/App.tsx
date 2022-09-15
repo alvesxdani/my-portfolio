@@ -1,5 +1,5 @@
 import GlobalStyle from './components/themes/global';
-import NavBar from './components/nav/nav';
+import NavBar from './components/nav';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import light from './components/themes/light';
 import dark from './components/themes/dark';
