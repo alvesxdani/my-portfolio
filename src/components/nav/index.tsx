@@ -1,6 +1,3 @@
-import Switch from "react-switch";
-import { ThemeContext } from "styled-components";
-import { useContext } from "react";
 import {
   BoxToggle,
   BrandTitle,
@@ -9,6 +6,9 @@ import {
   Link,
   LinksBox,
 } from "./style";
+import Switch from "react-switch";
+import { ThemeContext } from "styled-components";
+import { useContext, useState } from "react";
 import { BiHome, BiCodeAlt } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsFillPersonFill, BsFillChatLeftFill } from "react-icons/bs";
@@ -22,36 +22,37 @@ interface Props {
 const NavBar: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
 
+
   return (
     <nav>
       <ContainerNav>
         <BrandTitle>Daniela Moreira</BrandTitle>
 
         <LinksBox>
-          <Link href="/">
-            <BiHome />
-            <span>Home</span>
-          </Link>
+            <Link href="/">
+              <BiHome />
+              <span>Home</span>
+            </Link>
 
-          <Link href="#about">
-            <BsFillPersonFill />
-            <span>Sobre</span>
-          </Link>
+            <Link href="#about">
+              <BsFillPersonFill />
+              <span>Sobre</span>
+            </Link>
 
-          <Link href="#skills">
-            <BiCodeAlt />
-            <span>Skills</span>
-          </Link>
+            <Link href="#skills">
+              <BiCodeAlt />
+              <span>Skills</span>
+            </Link>
 
-          <Link href="#projects">
-            <MdWorkOutline />
-            <span>Projetos</span>
-          </Link>
+            <Link href="#projects">
+              <MdWorkOutline />
+              <span>Projetos</span>
+            </Link>
 
-          <Link href="#contact">
-            <BsFillChatLeftFill />
-            <span>Contato</span>
-          </Link>
+            <Link href="#contact">
+              <BsFillChatLeftFill />
+              <span>Contato</span>
+            </Link>
         </LinksBox>
 
         <ButtonMinNav>

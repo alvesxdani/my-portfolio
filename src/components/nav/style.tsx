@@ -39,8 +39,8 @@ export const LinksBox = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     padding: 1rem;
     border-radius:  2rem 2rem 0 0;
     background: ${props => props.theme.colors.backgroundNav};
@@ -67,6 +67,7 @@ export const Link = styled.a`
 
   @media(max-width: 900px) {
     margin-bottom: 1rem;
+    border:1px solid #eee;
   }
 `;
 
@@ -83,13 +84,11 @@ export const ButtonMinNav = styled.button`
     padding: 1rem;
     cursor: pointer;
     border: 1px solid ${(props) => props.theme.colors.third};
-
     svg {
       font-size: 2rem;
     }
   }
 `;
-
 
 export const BoxToggle = styled.div`
   display: flex;
