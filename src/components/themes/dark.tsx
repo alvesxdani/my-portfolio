@@ -13,7 +13,7 @@ export default {
     primary: '#339989',
     secundary: '#735290',
     third: '#2d2d2d',
-    background: '#000505',
+    background: '#161616',
     backgroundNav: '#191919',
     text: '#fff',
     link: '#339989'
