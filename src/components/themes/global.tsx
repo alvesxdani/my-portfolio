@@ -5,8 +5,8 @@ export default createGlobalStyle`
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 10px;
   font-family: 'Montserrat',sans-serif;
+  font-size: 10px;
 }
 
 html body {

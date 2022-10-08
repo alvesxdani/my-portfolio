@@ -16,6 +16,6 @@ export default {
     background: '#161616',
     backgroundNav: '#191919',
     text: '#fff',
-    link: '#339989'
+    link: '#339989',
   },
 };

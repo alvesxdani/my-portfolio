@@ -23,19 +23,35 @@ export const BrandTitle = styled.div`
   font: bold 2rem "Nunito", sans-serif;
   margin-left: 3rem;
   color: ${(props) => props.theme.colors.secundary};
+
   @media(max-width: 900px) {
     flex-grow:2;
   }
+
+  @media(max-width: 300px) {
+    visibility: hidden;
+  }
 `;
 
-export const LinksBox = styled.div`
+export const MenuStyled = styled.div`
   display: flex;
   justify-content: right;
   margin-right: 2rem;
   width: 100%;
+  transition: .80s ease-in;
 
   @media(max-width: 900px) {
     display: none;
+  }
+`;
+
+export const MenuMobileStyled = styled.div`
+  display: none;
+  transition: .80s ease-in;
+
+  @media(max-width: 900px) {
+    display: block;
+    width: 100vw;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -51,7 +67,7 @@ export const Link = styled.a`
   display: flex;
   align-items: center;
   color: ${(props) => props.theme.colors.primary};
-  margin-right: 2rem;
+  margin-right: 3rem;
   transition: 0.8s ease-in;
   span {
     font: 14px "Montserrat";
@@ -67,7 +83,13 @@ export const Link = styled.a`
 
   @media(max-width: 900px) {
     margin-bottom: 1rem;
-    border:1px solid #eee;
+    margin-right: 0;
+    padding: 0.3rem;
+    border-right: 3px solid ${(props) => props.theme.colors.secundary};
+
+    &:hover {
+      border-right: 3px solid ${(props) => props.theme.colors.primary};
+    }
   }
 `;
 
@@ -84,6 +106,7 @@ export const ButtonMinNav = styled.button`
     padding: 1rem;
     cursor: pointer;
     border: 1px solid ${(props) => props.theme.colors.third};
+
     svg {
       font-size: 2rem;
     }

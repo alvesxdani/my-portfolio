@@ -4,6 +4,7 @@ import { ThemeProvider, DefaultTheme } from 'styled-components';
 import light from './components/themes/light';
 import dark from './components/themes/dark';
 import usePersistedState from './components/utils/usePersistedState';
+import Intro from './components/intro';
 
 function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
@@ -15,10 +16,12 @@ const toggleTheme = () => {
   return (
     <ThemeProvider theme={theme}>
       <header>
-        <GlobalStyle />
+      <GlobalStyle />
         <NavBar toggleTheme={toggleTheme}/>
-        Teste
       </header>
+
+      <Intro/>
+
     </ThemeProvider>
   );
 }
