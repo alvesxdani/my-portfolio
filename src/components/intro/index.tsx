@@ -1,25 +1,70 @@
-import React from "react";
-import { ContainerIntro, DescBox, ImgBox } from "./style";
+import React, { useContext } from "react";
+import { ThemeContext } from "styled-components";
+import { ContainerIntro, DescBox, ImgBox, TitleIntro, SubtitleIntro, ButtonAbout } from "./style";
+import Photo from "./me.png";
+import { TypeAnimation } from 'react-type-animation';
+import { BsArrowRightShort } from "react-icons/bs";
 
 const Intro: React.FC = () => {
+  const { colors } = useContext(ThemeContext);
+
   return (
     <section id="intro">
       <ContainerIntro>
+
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
         <DescBox>
-          <h1>Oi! Meu nome é Daniela.</h1>
-          <h2>Sou desenvolvedora Front End Jr.</h2>
-          Example.
+          <TitleIntro>Oi! Meu nome é Daniela.</TitleIntro>
+          <SubtitleIntro>
+
+            <TypeAnimation
+              sequence={[
+                ' Desenvolvedora Front End Jr.', // Types 'One'
+                1500, // Waits 1s
+                ' ',
+                () => {
+                  console.log('Done typing!'); // Place optional callbacks anywhere in the array
+                }
+              ]}
+              wrapper="div"
+              cursor={true}
+              repeat={Infinity}
+              style={{ fontSize: '1.2em', fontFamily: 'Consolas, sans-serif' }}
+            />
+          </SubtitleIntro>
+          <ButtonAbout>Saiba mais <BsArrowRightShort size={16} style={{ marginLeft: '0.5rem' }} /> </ButtonAbout>
         </DescBox>
 
         <ImgBox>
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#8A3FFC"
-            d="M68.3,-18.8C78,7.7,68.1,43.9,46.4,58.4C24.7,72.8,-8.8,65.5,-34.1,47.1C-59.4,28.7,-76.4,-0.9,-69.4,-23.7C-62.3,-46.5,-31.2,-62.5,-0.9,-62.2C29.3,-61.9,58.6,-45.2,68.3,-18.8Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-      </ImgBox>
+          <svg viewBox="0 0 200 187" width="400px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <mask id="mask0" mask-type="alpha">
+              <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+            </mask>
+            <g mask="url(#mask0)" fill={colors.secundary}>
+              <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+              <image href={Photo} width="200px" y="-20" />
+            </g>
+          </svg>
+        </ImgBox>
+
       </ContainerIntro>
     </section>
   );
