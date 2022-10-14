@@ -16,7 +16,7 @@ align-content: center;
 margin-bottom: 1rem;
 `;
 
-export const BrandTitle = styled.div`
+export const BrandTitle = styled.a`
   flex-shrink: 0;
   font: bold 2rem "Nunito", sans-serif;
   margin-left: 3rem;

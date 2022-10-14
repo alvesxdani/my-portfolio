@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
+
 export const AboutContent = styled.div`
 width: 100vw;
 height: 100vh;
 background: ${(props) => props.theme.colors.secundary};
 color: #fff;
 padding: 2rem;
+box-sizing: border-box;
 
 @media (max-width: 950px) {
   height: auto;
+  padding: 3rem;
 }
 `;
 
@@ -38,6 +41,10 @@ text-align: center;
 @media (max-width: 950px) {
   width: 100%;
   margin-top: 5rem;
+
+  img {
+    width: 30%;
+  }
 }
 
 img {

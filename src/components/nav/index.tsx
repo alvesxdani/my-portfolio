@@ -35,7 +35,7 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <nav>
       <ContainerNav>
-        <BrandTitle>Daniela Moreira</BrandTitle>
+        <BrandTitle href="/">Daniela Moreira</BrandTitle>
 
         <MenuStyled>
           <StyledLink href="/">

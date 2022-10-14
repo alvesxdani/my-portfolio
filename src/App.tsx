@@ -24,7 +24,6 @@ const toggleTheme = () => {
       <Intro/>
 
       <About/>
-
     </ThemeProvider>
   );
 }
