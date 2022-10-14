@@ -38,62 +38,34 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
         <BrandTitle>Daniela Moreira</BrandTitle>
 
         <MenuStyled>
-            <Link href="/">
-              <BiHome />
-              <span>Home</span>
-            </Link>
+          <Link href="/">
+            <BiHome />
+            <span>Home</span>
+          </Link>
 
-            <Link href="#about">
-              <BsFillPersonFill />
-              <span>Sobre</span>
-            </Link>
+          <Link href="#about">
+            <BsFillPersonFill />
+            <span>Sobre</span>
+          </Link>
 
-            <Link href="#skills">
-              <BiCodeAlt />
-              <span>Skills</span>
-            </Link>
+          <Link href="#skills">
+            <BiCodeAlt />
+            <span>Skills</span>
+          </Link>
 
-            <Link href="#projects">
-              <MdWorkOutline />
-              <span>Projetos</span>
-            </Link>
+          <Link href="#projects">
+            <MdWorkOutline />
+            <span>Projetos</span>
+          </Link>
 
-            <Link href="#contact">
-              <BsFillChatLeftFill />
-              <span>Contato</span>
-            </Link>
+          <Link href="#contact">
+            <BsFillChatLeftFill />
+            <span>Contato</span>
+          </Link>
         </MenuStyled>
 
-        {extendedNav &&
-          (<MenuMobileStyled>
-            <Link href="/">
-              <BiHome />
-              <span>Home</span>
-            </Link>
-
-            <Link href="#about">
-              <BsFillPersonFill />
-              <span>Sobre</span>
-            </Link>
-
-            <Link href="#skills">
-              <BiCodeAlt />
-              <span>Skills</span>
-            </Link>
-
-            <Link href="#projects">
-              <MdWorkOutline />
-              <span>Projetos</span>
-            </Link>
-
-            <Link href="#contact">
-              <BsFillChatLeftFill />
-              <span>Contato</span>
-            </Link>
-        </MenuMobileStyled>)}
-
         <ButtonMinNav onClick={toggleMenu}>
-          {extendedNav ? <IoMdClose/> : <AiOutlineMenu />}
+          {extendedNav ? <IoMdClose /> : <AiOutlineMenu />}
         </ButtonMinNav>
 
         <BoxToggle>
@@ -112,6 +84,34 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
           />
         </BoxToggle>
       </ContainerNav>
+
+      {extendedNav &&
+        (<MenuMobileStyled>
+          <Link href="/">
+            <BiHome />
+            <span>Home</span>
+          </Link>
+
+          <Link href="#about">
+            <BsFillPersonFill />
+            <span>Sobre</span>
+          </Link>
+
+          <Link href="#skills">
+            <BiCodeAlt />
+            <span>Skills</span>
+          </Link>
+
+          <Link href="#projects">
+            <MdWorkOutline />
+            <span>Projetos</span>
+          </Link>
+
+          <Link href="#contact">
+            <BsFillChatLeftFill />
+            <span>Contato</span>
+          </Link>
+        </MenuMobileStyled>)}
     </nav>
   );
 };

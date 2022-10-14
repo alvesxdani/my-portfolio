@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ContainerNav = styled.div`
+position: fixed;
 left: 0;
 top: 0;
 width: 100%;
 height: 7rem;
-padding-top: 1rem;
 display: flex;
 flex-direction: row;
 background-color: ${(props) => props.theme.colors.backgroundNav};
@@ -14,10 +14,6 @@ font: 1rem 'Montserrat',sans-serif;
 align-items: center;
 align-content: center;
 margin-bottom: 1rem;
-
-// @media(max-width: 900px) {
-
-// }
 `;
 
 export const BrandTitle = styled.div`
@@ -48,15 +44,15 @@ export const MenuStyled = styled.div`
 `;
 
 export const MenuMobileStyled = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: none;
   transition: .80s ease-in;
 
   @media(max-width: 900px) {
     display: block;
     width: 100vw;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     flex-direction: column;
     align-items: center;
     padding: 1rem;

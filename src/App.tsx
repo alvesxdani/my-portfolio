@@ -5,6 +5,7 @@ import light from './components/themes/light';
 import dark from './components/themes/dark';
 import usePersistedState from './components/utils/usePersistedState';
 import Intro from './components/intro';
+import About from './components/about';
 
 function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
@@ -21,6 +22,8 @@ const toggleTheme = () => {
       </header>
 
       <Intro/>
+
+      <About/>
 
     </ThemeProvider>
   );
