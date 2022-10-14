@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const AboutContent = styled.div`
-width: 100%;
+width: 100vw;
 height: 100vh;
 background: ${(props) => props.theme.colors.secundary};
 color: #fff;
 padding: 2rem;
+
+@media (max-width: 950px) {
+  height: auto;
+}
 `;
 
 export const TitleAbout = styled.div`
@@ -21,11 +25,20 @@ export const ContainerFlex = styled.div`
   width: 100%;
   height: calc(100vh - 10%);
   align-items: center;
+  
+  @media (max-width: 950px) {
+    flex-direction: column;
+  }
 `;
 
 export const ImgMeBox = styled.div`
 width: 50%;
 text-align: center;
+
+@media (max-width: 950px) {
+  width: 100%;
+  margin-top: 5rem;
+}
 
 img {
   width: 50%;
@@ -39,6 +52,12 @@ texta-align: justify;
 font: 1.8rem 'Montserrat', sans-serif;
 line-height: 3rem;
 padding: 2.5rem;
+box-sizing: content-box;
+
+@media (max-width: 950px) {
+  width: 100%;
+  font-size: 1.5rem;
+}
 `;
 
 export const SocialMediaBox = styled.div`

@@ -26,7 +26,7 @@ align-content: center;
   animation: animate 25s linear infinite;
   bottom: -150px;
   background: ${(props) => props.theme.colors.text};
-  filter: opacity(30%);
+  filter: opacity(20%);
 }
 
 .circles li:nth-child(1){
