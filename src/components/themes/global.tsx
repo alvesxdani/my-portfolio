@@ -9,7 +9,7 @@ export default createGlobalStyle`
   font-size: 10px;
 }
 
-html body {
+html, body {
   width: 100vw;
   scroll-behavior: smooth;
 }
