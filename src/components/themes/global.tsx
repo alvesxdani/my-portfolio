@@ -11,6 +11,7 @@ export default createGlobalStyle`
 
 html body {
   width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {

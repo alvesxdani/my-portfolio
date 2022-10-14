@@ -3,7 +3,7 @@ import {
   BrandTitle,
   ButtonMinNav,
   ContainerNav,
-  Link,
+  StyledLink,
   MenuMobileStyled,
   MenuStyled
 } from "./style";
@@ -38,30 +38,30 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
         <BrandTitle>Daniela Moreira</BrandTitle>
 
         <MenuStyled>
-          <Link href="/">
+          <StyledLink href="/">
             <BiHome />
             <span>Home</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#about">
+          <StyledLink href="#about">
             <BsFillPersonFill />
             <span>Sobre</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#skills">
+          <StyledLink href="#skills">
             <BiCodeAlt />
             <span>Skills</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#projects">
+          <StyledLink href="#projects">
             <MdWorkOutline />
             <span>Projetos</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#contact">
+          <StyledLink href="#contact">
             <BsFillChatLeftFill />
             <span>Contato</span>
-          </Link>
+          </StyledLink>
         </MenuStyled>
 
         <ButtonMinNav onClick={toggleMenu}>
@@ -87,30 +87,30 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
 
       {extendedNav &&
         (<MenuMobileStyled>
-          <Link href="/">
+          <StyledLink href="/">
             <BiHome />
             <span>Home</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#about">
+          <StyledLink href="#about">
             <BsFillPersonFill />
             <span>Sobre</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#skills">
+          <StyledLink href="#skills">
             <BiCodeAlt />
             <span>Skills</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#projects">
+          <StyledLink href="#projects">
             <MdWorkOutline />
             <span>Projetos</span>
-          </Link>
+          </StyledLink>
 
-          <Link href="#contact">
+          <StyledLink href="#contact">
             <BsFillChatLeftFill />
             <span>Contato</span>
-          </Link>
+          </StyledLink>
         </MenuMobileStyled>)}
     </nav>
   );

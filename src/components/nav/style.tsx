@@ -44,7 +44,7 @@ export const MenuStyled = styled.div`
 `;
 
 export const MenuMobileStyled = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   display: none;
@@ -61,7 +61,7 @@ export const MenuMobileStyled = styled.div`
   }
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled.a`
   display: flex;
   align-items: center;
   color: ${(props) => props.theme.colors.primary};
