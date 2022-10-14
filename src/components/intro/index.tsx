@@ -44,7 +44,10 @@ const Intro: React.FC = () => {
               style={{ fontSize: '1.2em', fontFamily: 'Consolas, sans-serif' }}
             />
           </SubtitleIntro>
-          <ButtonAbout>Saiba mais <BsArrowRightShort size={16} style={{ marginLeft: '0.5rem' }} /> </ButtonAbout>
+
+          <ButtonAbout href="#about">
+            Saiba mais <BsArrowRightShort size={16} style={{ marginLeft: '0.5rem' }} />
+          </ButtonAbout>
         </DescBox>
 
         <ImgBox>

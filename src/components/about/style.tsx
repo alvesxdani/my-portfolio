@@ -47,6 +47,12 @@ export const SocialMediaBox = styled.div`
 
   a {
     color: ${(props) => props.theme.colors.third};
+    transition: .80s ease-in-out;
+  }
+
+  a:hover {
+    color: ${(props) => props.theme.colors.primary};
+    filter brightness(120%);
   }
 `;
 export const BoxButton = styled.div`
@@ -60,7 +66,7 @@ align-items:center;
 align-content: center;
 background: #fff;
 padding: 1.5rem;
-border-radius: 4px;
+border-radius: 5px;
 font-size: 1.5rem;
 font-weight: bold;
 border: 1px solid #aaa;

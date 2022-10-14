@@ -147,7 +147,7 @@ color: ${(props) => props.theme.colors.secundary};
 margin-bottom: 2rem;
 `;
 
-export const ButtonAbout = styled.button`
+export const ButtonAbout = styled.a`
   display: flex;
   align-content: center;
   align-items:center;
@@ -164,6 +164,7 @@ export const ButtonAbout = styled.button`
 
   &:hover {
     background: ${(props) => props.theme.colors.primary};
+    filter brightness(110%);
   }
 `;
 
