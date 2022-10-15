@@ -33,10 +33,7 @@ const Intro: React.FC = () => {
               sequence={[
                 ' Desenvolvedora Front End Jr.', // Types 'One'
                 1500, // Waits 1s
-                ' ',
-                () => {
-                  console.log('Done typing!'); // Place optional callbacks anywhere in the array
-                }
+                ' '
               ]}
               wrapper="div"
               cursor={true}

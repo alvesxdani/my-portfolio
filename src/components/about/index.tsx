@@ -13,7 +13,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <section id="about">
+    <section id="about" data-aos="fade">
       <AboutContent>
         <TitleAbout>Sobre mim</TitleAbout>
         <ContainerFlex>

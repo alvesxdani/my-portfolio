@@ -20,6 +20,7 @@ export const TitleAbout = styled.div`
   text-align: center;
   font-weight: bold;
   text-decoration: underline ${(props) => props.theme.colors.primary} wavy 3px;
+  margin-top: 2rem;
 `;
 
 export const ContainerFlex = styled.div`
