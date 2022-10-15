@@ -23,7 +23,9 @@ function App() {
       </header>
 
       <Intro/>
+
       <About/>
+      
       <Skills/>
     </ThemeProvider>
   );

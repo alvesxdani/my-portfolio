@@ -14,6 +14,7 @@ font: 1rem 'Montserrat',sans-serif;
 align-items: center;
 align-content: center;
 margin-bottom: 1rem;
+z-index: 9999;
 `;
 
 export const BrandTitle = styled.a`
