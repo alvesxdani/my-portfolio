@@ -29,14 +29,14 @@ export const SkillsBox = styled.div`
 display: flex;
 width: 100%;
 justify-content: center;
+align-items: center;
 text-align: center;
 margin-bottom: 7rem;
-transition: .80s ease-in;
 padding: 3rem;
+transition: .80s ease-in;
 
 i {
   flex-grow: 1;
-  transition: .80s ease-in;
   font-size: 10rem;
 }
 
@@ -45,8 +45,11 @@ i:hover {
 }
 
 @media (max-width: 700px) {
-  flex-direction: column;
   height: auto;
+
+  i {
+    font-size: 5rem;
+  }
 }
 `;
 
