@@ -67,17 +67,24 @@ export const StyledLink = styled.a`
   align-items: center;
   color: ${(props) => props.theme.colors.primary};
   margin-right: 3rem;
-  transition: 0.8s ease-in;
+  transition: .80s ease-in;
   span {
     font: 14px "Montserrat";
     font-weight: 600;
   }
+
   svg {
     font-size: 1.5rem;
     margin-right: 1rem;
+    transition: .80s ease-in;
   }
+
   &:hover {
     color: ${(props) => props.theme.colors.secundary};
+  }
+
+  &:hover svg {
+    color: ${(props) => props.theme.colors.text};
   }
 
   @media(max-width: 900px) {

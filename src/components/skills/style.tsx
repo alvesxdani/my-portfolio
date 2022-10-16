@@ -39,7 +39,7 @@ i {
   flex-grow: 1;
   font-size: 10rem;
 }
-
+ 
 i:hover {
   color: ${(props) => props.theme.colors.secundary};
 }

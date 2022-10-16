@@ -23,4 +23,10 @@ body {
 a {
   text-decoration: none;
 }
+
+::selection {
+  background-color: ${props => props.theme.colors.primary};
+  color: #fff;
+}
+
 `;

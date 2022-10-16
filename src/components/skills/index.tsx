@@ -22,7 +22,7 @@ const Skills: React.FC = () => {
 
           <SkillsBox>
             <i className="devicon-typescript-plain" data-aos="fade-down" />
-            <i className="devicon-bootstrap-plain" data-aos="fade-up"></i>
+            <i className="devicon-bootstrap-plain" data-aos="fade-up" />
             <i className="devicon-git-plain" data-aos="fade-down" />
             <i className="devicon-github-original" data-aos="fade-up" />
           </SkillsBox>
