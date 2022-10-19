@@ -138,13 +138,14 @@ export const TitleIntro = styled.h1`
 font-size: 4rem;
 color: ${(props) => props.theme.colors.primary};
 margin: 0.5rem;
+text-align:center;
 `;
 
 export const SubtitleIntro = styled.h2`
 font-size: 2rem;
 font-family: 'Consolas', sans-serif;
 color: ${(props) => props.theme.colors.secundary};
-margin-bottom: 2rem;
+margin: 2rem;
 `;
 
 export const ButtonAbout = styled.a`
