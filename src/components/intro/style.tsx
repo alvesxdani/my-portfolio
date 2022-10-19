@@ -145,7 +145,7 @@ export const SubtitleIntro = styled.h2`
 font-size: 2rem;
 font-family: 'Consolas', sans-serif;
 color: ${(props) => props.theme.colors.secundary};
-margin: 2rem;
+margin: 0 2rem 2rem 2rem;
 `;
 
 export const ButtonAbout = styled.a`
