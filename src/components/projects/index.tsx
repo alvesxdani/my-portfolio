@@ -11,13 +11,21 @@ import Project3 from "./03project.png"
 import Project4 from "./04project.png"
 import Project5 from "./05project.png"
 import Project6 from "./06project.png"
+import AOS from 'aos';
+import { useEffect } from "react";
 
 const Projects: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 })
+  }, []);
+  
   return (
     <section id="projects">
       <ContainerProjects>
-        <ProjectsTitle>Projetos</ProjectsTitle>
+        <ProjectsTitle data-aos="fade">Projetos</ProjectsTitle>
+
         <Swiper
+          data-aos="fade-up"
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
