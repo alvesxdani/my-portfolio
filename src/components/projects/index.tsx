@@ -1,4 +1,4 @@
-import { ContainerProjects, ProjectsTitle } from "./style";
+import { BoxSlide, ContainerProjects, ProjectsTitle, TitleSlide } from "./style";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
             disableOnInteraction: false,
           }}
           pagination={{
-            clickable: true,
+            clickable: true
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
@@ -41,26 +41,53 @@ const Projects: React.FC = () => {
         >
           <SwiperSlide>
             <img src={Project1} alt="My project one" />
+
+            <BoxSlide>
+              <TitleSlide>Product View: ReactJS</TitleSlide>
+              Projeto feito com ReactJS.
+            </BoxSlide>
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={Project2} alt="My project two" />
+
+            <BoxSlide>
+              <TitleSlide>To Do List: ReactJS</TitleSlide>
+              Projeto feito com ReactJS.
+            </BoxSlide>
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={Project3} alt="My project three" />
+
+            <BoxSlide>
+              <TitleSlide>Pokedex: PokeAPI</TitleSlide>
+              Projeto feito com HTML, CSS, JS com consumo de API.
+            </BoxSlide>
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={Project4} alt="My project four" />
+            <BoxSlide>
+              <TitleSlide>Landing Page: JS</TitleSlide>
+              Projeto feito com HTML, CSS e JS puro.
+            </BoxSlide>
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={Project5} alt="My project five" />
+            <BoxSlide>
+              <TitleSlide>Landing Page: Bootstrap</TitleSlide>
+              Projeto feito com HTML, CSS, utilizando o framework Bootstrap.
+            </BoxSlide>
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={Project6} alt="My project six" />
+            <BoxSlide>
+              <TitleSlide>Formulário de votação: Python (Django)</TitleSlide>
+              Projeto feito com Python, usufruindo do framework Django.
+            </BoxSlide>
           </SwiperSlide>
         </Swiper>
       </ContainerProjects>

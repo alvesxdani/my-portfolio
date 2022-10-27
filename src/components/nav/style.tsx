@@ -50,6 +50,7 @@ export const MenuMobileStyled = styled.div`
   left: 0;
   display: none;
   transition: .80s ease-in;
+  z-index: 999;
 
   @media(max-width: 900px) {
     display: block;
