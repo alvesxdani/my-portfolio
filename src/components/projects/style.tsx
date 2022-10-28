@@ -28,12 +28,26 @@ width: 100%;
 height: 30%;
 justify-content: center;
 align-items: center;
-font-size: 1.2rem;
+font-size: 1.3rem;
+
+a{
+    color: ${(props) => props.theme.colors.primary};
+}
+
+a:hover {
+    filter: brightness(120%);
+}
 `;
 
 export const TitleSlide = styled.div`
 width: 100%;
 font-size: 2rem;
 font-weight: bold;
-margin-bottom: 1rem;
+margin-bottom: 0.5rem;
+padding: 1rem;
+`;
+
+export const IconsBox = styled.div`
+width: 100%;
+margin: 1rem;
 `;

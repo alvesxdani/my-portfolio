@@ -1,24 +1,32 @@
-import { BoxSlide, ContainerProjects, ProjectsTitle, TitleSlide } from "./style";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  BoxSlide,
+  ContainerProjects,
+  IconsBox,
+  ProjectsTitle,
+  TitleSlide,
+} from "./style";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styleSlide.css";
 import Project1 from "./01project.png";
-import Project2 from "./02project.png"
-import Project3 from "./03project.png"
-import Project4 from "./04project.png"
-import Project5 from "./05project.png"
-import Project6 from "./06project.png"
-import AOS from 'aos';
+import Project2 from "./02project.png";
+import Project3 from "./03project.png";
+import Project4 from "./04project.png";
+import Project5 from "./05project.png";
+import Project6 from "./06project.png";
+import AOS from "aos";
 import { useEffect } from "react";
+import { BiLinkExternal } from "react-icons/bi";
+import { AiFillGithub } from "react-icons/ai";
 
 const Projects: React.FC = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000 })
+    AOS.init({ duration: 2000 });
   }, []);
-  
+
   return (
     <section id="projects">
       <ContainerProjects>
@@ -33,7 +41,7 @@ const Projects: React.FC = () => {
             disableOnInteraction: false,
           }}
           pagination={{
-            clickable: true
+            clickable: true,
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
@@ -45,6 +53,14 @@ const Projects: React.FC = () => {
             <BoxSlide>
               <TitleSlide>Product View: ReactJS</TitleSlide>
               Projeto feito com ReactJS.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/product-view">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani.github.io/product-view/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
             </BoxSlide>
           </SwiperSlide>
 
@@ -54,6 +70,14 @@ const Projects: React.FC = () => {
             <BoxSlide>
               <TitleSlide>To Do List: ReactJS</TitleSlide>
               Projeto feito com ReactJS.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/todolist">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani-todolist.netlify.app/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
             </BoxSlide>
           </SwiperSlide>
 
@@ -63,6 +87,14 @@ const Projects: React.FC = () => {
             <BoxSlide>
               <TitleSlide>Pokedex: PokeAPI</TitleSlide>
               Projeto feito com HTML, CSS, JS com consumo de API.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/pokedex">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani.github.io/pokedex/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
             </BoxSlide>
           </SwiperSlide>
 
@@ -71,6 +103,14 @@ const Projects: React.FC = () => {
             <BoxSlide>
               <TitleSlide>Landing Page: JS</TitleSlide>
               Projeto feito com HTML, CSS e JS puro.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/exercDOM">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani.github.io/exercDOM/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
             </BoxSlide>
           </SwiperSlide>
 
@@ -79,6 +119,14 @@ const Projects: React.FC = () => {
             <BoxSlide>
               <TitleSlide>Landing Page: Bootstrap</TitleSlide>
               Projeto feito com HTML, CSS, utilizando o framework Bootstrap.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/landingPage">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani.github.io/landingPage/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
             </BoxSlide>
           </SwiperSlide>
 
@@ -87,12 +135,20 @@ const Projects: React.FC = () => {
             <BoxSlide>
               <TitleSlide>Formulário de votação: Python (Django)</TitleSlide>
               Projeto feito com Python, usufruindo do framework Django.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/vote-forms">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://vote-forms.herokuapp.com">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
             </BoxSlide>
           </SwiperSlide>
         </Swiper>
       </ContainerProjects>
     </section>
   );
-}
+};
 
 export default Projects;
