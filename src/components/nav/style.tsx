@@ -53,11 +53,12 @@ export const MenuMobileStyled = styled.div`
   z-index: 999;
 
   @media(max-width: 900px) {
-    display: block;
-    width: 100vw;
-    flex-direction: column;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
     align-items: center;
-    padding: 1rem;
+    justify-content: center;
+    padding: 2rem;
     border-radius:  2rem 2rem 0 0;
     background: ${props => props.theme.colors.backgroundNav};
   }
@@ -92,10 +93,12 @@ export const StyledLink = styled.a`
     margin-bottom: 1rem;
     margin-right: 0;
     padding: 0.3rem;
-    border-right: 3px solid ${(props) => props.theme.colors.secundary};
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 
     &:hover {
-      border-right: 3px solid ${(props) => props.theme.colors.primary};
+      color: #aaa;
     }
   }
 `;

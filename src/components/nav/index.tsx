@@ -88,30 +88,26 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
       {extendedNav &&
         (<MenuMobileStyled>
           <StyledLink href="/">
-            <BiHome />
-            <span>Home</span>
+            <BiHome size={25}/>
           </StyledLink>
 
-          <StyledLink href="#about">
-            <BsFillPersonFill />
-            <span>Sobre</span>
+          <StyledLink href="#about" onClick={toggleMenu}>
+            <BsFillPersonFill size={25}/>
           </StyledLink>
 
-          <StyledLink href="#skills">
-            <BiCodeAlt />
-            <span>Skills</span>
+          <StyledLink href="#skills" onClick={toggleMenu}>
+            <BiCodeAlt size={25}/>
           </StyledLink>
 
-          <StyledLink href="#projects">
-            <MdWorkOutline />
-            <span>Projetos</span>
+          <StyledLink href="#projects"onClick={toggleMenu}>
+            <MdWorkOutline size={25}/>
           </StyledLink>
 
-          <StyledLink href="#contact">
-            <BsFillChatLeftFill />
-            <span>Contato</span>
+          <StyledLink href="#contact" onClick={toggleMenu}>
+            <BsFillChatLeftFill size={25}/>
           </StyledLink>
-        </MenuMobileStyled>)}
+        </MenuMobileStyled>)
+        }
     </nav>
   );
 };
