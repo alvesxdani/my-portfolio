@@ -1,6 +1,12 @@
-import { ContainerFlexSkills, SkillsBox, SkillsContent, SkillsTitle } from "./style";
+import { ContainerFlexSkills, SkillsContent, SkillsTitle } from "./style";
 import { useEffect } from "react";
 import AOS from 'aos';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "./styles.css";
 
 const Skills: React.FC = () => {
   useEffect(() => {
@@ -13,19 +19,49 @@ const Skills: React.FC = () => {
         <SkillsTitle>Skills</SkillsTitle>
         <ContainerFlexSkills>
 
-          <SkillsBox>
-            <i className="devicon-html5-plain" data-aos="fade-up" />
-            <i className="devicon-css3-plain" data-aos="fade-down" />
-            <i className="devicon-javascript-plain" data-aos="fade-up" />
-            <i className="devicon-react-original" data-aos="fade-down" />
-          </SkillsBox>
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+            data-aos="fade-up"
+          >
+            <SwiperSlide>
+              <i className="devicon-html5-plain" />
+            </SwiperSlide>
 
-          <SkillsBox>
-            <i className="devicon-typescript-plain" data-aos="fade-down" />
-            <i className="devicon-bootstrap-plain" data-aos="fade-up" />
-            <i className="devicon-git-plain" data-aos="fade-down" />
-            <i className="devicon-github-original" data-aos="fade-up" />
-          </SkillsBox>
+            <SwiperSlide>
+              <i className="devicon-css3-plain" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <i className="devicon-javascript-plain" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <i className="devicon-react-original" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <i className="devicon-typescript-plain" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <i className="devicon-bootstrap-plain" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <i className="devicon-git-plain" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <i className="devicon-github-original" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+            <i className="devicon-npm-original-wordmark"/>
+            </SwiperSlide>
+          </Swiper>
 
         </ContainerFlexSkills>
       </SkillsContent>
