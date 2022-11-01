@@ -61,6 +61,10 @@ const Skills: React.FC = () => {
             <SwiperSlide>
             <i className="devicon-npm-original-wordmark"/>
             </SwiperSlide>
+
+            <SwiperSlide>
+            <i className="devicon-django-plain"/>
+            </SwiperSlide>
           </Swiper>
 
         </ContainerFlexSkills>

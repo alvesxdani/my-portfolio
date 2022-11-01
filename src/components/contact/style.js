@@ -40,7 +40,8 @@ input, textarea {
     padding: 0.5rem;
     font-size: 2rem;
     border-radius: 0.3rem;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
+
 }
 
 input:focus, textarea:focus {
@@ -51,11 +52,17 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 0.3rem;
     font-size: 1.3rem;
     cursor: pointer;
     background: ${(props) => props.theme.colors.secundary};
     color: #fff;
+    border: none;
+    transition: .80s ease-in;
+}
+
+button:hover {
+    filter: brightness(130%);
 }
 `;

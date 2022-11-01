@@ -11,6 +11,12 @@
   color: #fff;
 }
 
+@media (max-width: 610px) {
+  .swiper-slide {
+    height: 70%;
+  }
+}
+
 .swiper-slide i {
   font-size: 10rem;
 }
