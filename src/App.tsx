@@ -8,6 +8,7 @@ import Intro from './components/intro';
 import About from './components/about';
 import Skills from './components/skills';
 import Projects from './components/projects';
+import Contact from './components/contact';
 
 function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
@@ -30,6 +31,8 @@ function App() {
       <Skills/>
 
       <Projects/>
+
+      <Contact/>
     </ThemeProvider>
   );
 }
