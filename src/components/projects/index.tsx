@@ -10,7 +10,6 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./styleSlide.css";
 import Project1 from "./01project.png";
 import Project2 from "./02project.png";
 import Project3 from "./03project.png";
@@ -21,6 +20,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
+import "./styles.css";
 
 const Projects: React.FC = () => {
   useEffect(() => {

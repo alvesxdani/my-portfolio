@@ -20,6 +20,10 @@
 }
 
 .swiper-slide:nth-child(2n+0) {
-  background-color: #339989;
+  background-color: #fff;
+}
+
+.swiper-slide:nth-child(2n+0) i {
+  color: #1d1d1d;
 }
 
