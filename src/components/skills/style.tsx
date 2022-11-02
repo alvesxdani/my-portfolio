@@ -26,5 +26,10 @@ width: 50%;
 height: 100%;
 justify-content: center;
 align-items: center;
+@media (max-width: 610px) {
+  .swiper-slide {
+    height: 70%;
+  }
+}
 `;
 

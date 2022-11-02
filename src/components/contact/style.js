@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 export const ContainerContact = styled.div`
+position: relative;
 display: flex;
 width: 100%;
 height: 100vh;
 align-items: center;
 flex-direction: column;
+svg {
+    filter: brightness(95%);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+  }
 `;
 
 export const ContactTitle = styled.div`
@@ -28,6 +37,7 @@ form {
     display: flex;
     width: 100%;
     flex-direction: column;
+    z-index: 1;
 }
 
 label {
@@ -50,6 +60,7 @@ input:focus, textarea:focus {
 
 button {
     display: flex;
+    width: 30%;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
@@ -60,6 +71,7 @@ button {
     color: #fff;
     border: none;
     transition: .80s ease-in;
+    align-itself: center;
 }
 
 button:hover {
