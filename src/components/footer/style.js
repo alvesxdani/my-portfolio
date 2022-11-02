@@ -11,6 +11,9 @@ display: flex;
 flex-direction: column;
 align-items: end;
 justify-content: center;
+
+@media (max-width: 600px) {
+  height: auto;
 `;
 
 export const GridContent = styled.div`
@@ -18,6 +21,13 @@ width: 70%;
 display: grid;
 grid-template-columns: repeat(3, 2fr);
 gap: 2rem;
+
+@media (max-width: 600px) {
+display: flex;
+flex-direction: column;
+width: 100%;
+gap: 5rem;
+}
 `;
 
 export const TitlesFooter = styled.div`
