@@ -12,8 +12,9 @@ flex-direction: column;
 align-items: end;
 justify-content: center;
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   height: auto;
+  justify-content:center;
 `;
 
 export const GridContent = styled.div`
@@ -22,7 +23,7 @@ display: grid;
 grid-template-columns: repeat(3, 2fr);
 gap: 2rem;
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 display: flex;
 flex-direction: column;
 width: 100%;

@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           <LinksFooter>
             <TitlesFooter>Links:</TitlesFooter>
             <a href="/">Início</a>
-            <a href="#Projetos">Projetos</a>
+            <a href="#projects">Projetos</a>
             <a href="#contact">Contato</a>
           </LinksFooter>
 
