@@ -16,6 +16,7 @@ import Project3 from "./03project.png";
 import Project4 from "./04project.png";
 import Project5 from "./05project.png";
 import Project6 from "./06project.png";
+import Project7 from "./07project.png";
 import AOS from "aos";
 import { useEffect } from "react";
 import { BiLinkExternal } from "react-icons/bi";
@@ -48,8 +49,23 @@ const Projects: React.FC = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src={Project1} alt="My project one" />
+            <img src={Project7} alt="My project seven" />
+            <BoxSlide>
+              <TitleSlide>Calculadora: ReactJS</TitleSlide>
+              Projeto feito com ReactJS.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/calculator">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani.github.io/landingPage/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
+            </BoxSlide>
+          </SwiperSlide>
 
+          <SwiperSlide>
+            <img src={Project1} alt="My project one" />
             <BoxSlide>
               <TitleSlide>Product View: ReactJS</TitleSlide>
               Projeto feito com ReactJS.

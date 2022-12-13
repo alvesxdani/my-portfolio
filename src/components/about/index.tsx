@@ -23,7 +23,7 @@ const About: React.FC = () => {
           </ImgMeBox>
 
           <DescAbout data-aos="fade-down">
-            Olá! Meu nome é Daniela, tenho 25 anos e moro no Rio de Janeiro. Sou formada em Análise e Desenvolvimento de Sistemas pelo Centro Universitário Carioca. Sou apaixonada por tecnologia, desde sempre lidando com o mundo da informática. Com meus 14/15 anos, aprendi HTML e CSS. Aos 15 anos, desenvolvi a minha primeira página complexa, utilizando essas duas linguagens de marcação. Atualmente, estudo tecnologias para atuar na área de Desenvolvimento Front-End. Seja bem vindo(a) e fique a vontade para conhecer um pouco dos meus projetos! &#128515;
+            Olá! Meu nome é Daniela, tenho 26 anos e moro no Rio de Janeiro. Sou formada em Análise e Desenvolvimento de Sistemas pelo Centro Universitário Carioca. Sou apaixonada por tecnologia, desde sempre lidando com o mundo da informática. Com meus 14/15 anos, aprendi HTML e CSS. Aos 15 anos, desenvolvi a minha primeira página complexa, utilizando essas duas linguagens de marcação. Atualmente, estudo tecnologias para atuar na área de Desenvolvimento Front-End. Seja bem vindo(a) e fique a vontade para conhecer um pouco dos meus projetos! &#128515;
             <SocialMediaBox>
               <a href="https://linkedin.com/in/daniela-alvesm">
                 <BsLinkedin size={30} />
