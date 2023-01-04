@@ -17,6 +17,7 @@ import Project4 from "./04project.png";
 import Project5 from "./05project.png";
 import Project6 from "./06project.png";
 import Project7 from "./07project.png";
+import Project8 from "./08project.png";
 import AOS from "aos";
 import { useEffect } from "react";
 import { BiLinkExternal } from "react-icons/bi";
@@ -38,7 +39,7 @@ const Projects: React.FC = () => {
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -49,6 +50,22 @@ const Projects: React.FC = () => {
           className="mySwiper"
         >
           <SwiperSlide>
+            <img src={Project8} alt="My project seven" />
+            <BoxSlide>
+              <TitleSlide>Formulário: React e TypeScript</TitleSlide>
+              Projeto feito com React, TypeScript, React Hook Forms e Yup.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/tela-forms">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani.github.io/tela-forms/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
+            </BoxSlide>
+          </SwiperSlide>
+
+          <SwiperSlide>
             <img src={Project7} alt="My project seven" />
             <BoxSlide>
               <TitleSlide>Calculadora: ReactJS</TitleSlide>
@@ -57,7 +74,7 @@ const Projects: React.FC = () => {
                 <a href="https://github.com/alvesxdani/calculator">
                   <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
                 </a>
-                <a href="https://alvesxdani.github.io/landingPage/">
+                <a href="https://alvesxdani.github.io/calculator/">
                   <BiLinkExternal size={20} />
                 </a>
               </IconsBox>
