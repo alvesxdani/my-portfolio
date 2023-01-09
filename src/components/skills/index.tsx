@@ -47,6 +47,10 @@ const Skills: React.FC = () => {
             </SwiperSlide>
 
             <SwiperSlide>
+            <i className="devicon-sass-original" />
+            </SwiperSlide>
+
+            <SwiperSlide>
               <i className="devicon-bootstrap-plain" />
             </SwiperSlide>
 
