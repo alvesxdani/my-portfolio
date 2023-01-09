@@ -18,6 +18,7 @@ import Project5 from "./05project.png";
 import Project6 from "./06project.png";
 import Project7 from "./07project.png";
 import Project8 from "./08project.png";
+import Project9 from "./09project.png";
 import AOS from "aos";
 import { useEffect } from "react";
 import { BiLinkExternal } from "react-icons/bi";
@@ -49,6 +50,23 @@ const Projects: React.FC = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
+
+          <SwiperSlide>
+            <img src={Project9} alt="My project seven" />
+            <BoxSlide>
+              <TitleSlide>Landing Page: Le Scone</TitleSlide>
+              Projeto feito com HTML, React e SASS.
+              <IconsBox>
+                <a href="https://github.com/alvesxdani/le-scone">
+                  <AiFillGithub size={20} style={{ marginRight: "1rem" }} />
+                </a>
+                <a href="https://alvesxdani.github.io/le-scone/">
+                  <BiLinkExternal size={20} />
+                </a>
+              </IconsBox>
+            </BoxSlide>
+          </SwiperSlide>
+
           <SwiperSlide>
             <img src={Project8} alt="My project seven" />
             <BoxSlide>
