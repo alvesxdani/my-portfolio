@@ -7,14 +7,25 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        maincolor: '#A44200',
+        bgcolor: '#333',
+        lightcolor: '#FDFBFB'
+      },
+      fontFamily: {
+        montserrat: 'var(--montserrat)',
+        opensans: 'var(--opensans)',
+        lato: 'var(--lato)',
       },
     },
+    plugins: [],
   },
-  plugins: [],
 }
 export default config
