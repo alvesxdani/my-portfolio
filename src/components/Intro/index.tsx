@@ -1,11 +1,37 @@
+"use client"
 import React from 'react'
+import Typed from 'typed.js';
+import Button from '../Button';
+import Image from 'next/image';
+
 
 const Intro = () => {
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['Front-End Developer'],
+      typeSpeed: 50,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   return (
-    <div className="flex flex-col text-center justify-center w-100 h-[90vh] border border-dark">
+    <section id='intro' className="flex flex-col justify-center items-center w-100 h-[90vh] gap-3 text-center">
       <h1 className='font-montserrat font-bold'>Oi, meu nome é <span className="text-maincolor">Daniela</span>.</h1>
-      <p className='uppercase text-lg text-bold font-lato'>Front End Developer</p>
-    </div>
+      <p className='uppercase text-lg text-bolder font-lato mb-3'>
+      <span ref={el} />
+      </p>
+      <a href="#sobre">
+      <Button type='button' size='md'>
+        <Image src='./Images/Intro/seta.svg' alt="Uma pequena seta para baixo" width={8} height={15} />
+        Saiba mais
+      </Button>
+      </a>
+    </section>
   )
 }
 

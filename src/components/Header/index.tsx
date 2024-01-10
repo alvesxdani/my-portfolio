@@ -27,7 +27,7 @@ const Header = (): JSX.Element => {
   return (
     <div
       className={
-        'bg-[#222] pr-[2rem] pl-[2rem] pt-[0.5rem] flex flex-row items-center justify-between w-100 min-h-[94px] sticky font-lato flex-wrap md:flex-nowrap'
+        'bg-[#222] pr-[2rem] pl-[2rem] pt-[0.5rem] flex flex-row items-center justify-between w-100 min-h-[94px] sticky top-0 font-lato flex-wrap md:flex-nowrap z-50'
       }
     >
       <div className="w-9 h-[43px]">
@@ -44,18 +44,18 @@ const Header = (): JSX.Element => {
       </button>
 
       {isOpen && (
-        <ul className={`w-[100%] flex flex-col m-4 gap-2 md:m-0 md:flex-row md:gap-[3rem] md:items-center md:justify-center md:w-auto font-lato text-white bg-[#222] ${isOpen ? 'animationDown' : ''}`}>
+        <ul className={`w-[100%] flex flex-col m-4 gap-2 md:m-0 md:flex-row md:gap-[3rem] md:items-center md:justify-center md:w-auto font-lato text-white bg-[#222] text-center ${isOpen ? 'animationDown' : ''}`}>
         <li className='hover:text-maincolor transition-all'>
           <a href="/">HOME</a>
         </li>
         <li className='hover:text-maincolor transition-all'>
-          <a href="/">SOBRE</a>
+          <a href="#sobre">SOBRE</a>
         </li>
         <li className='hover:text-maincolor transition-all'>
-          <a href="/">SKILLS</a>
+          <a href="#skills">SKILLS</a>
         </li>
         <li className='hover:text-maincolor transition-all'>
-          <a href="/">PROJETOS</a>
+          <a href="#projetos">PROJETOS</a>
         </li>
       </ul>
       )}
