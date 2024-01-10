@@ -1,38 +1,64 @@
-"use client"
-import useWindowSize from "@/Hooks/useWindowSize"
-import { useState } from "react"
+'use client'
+import useWindowSize from '@/Hooks/useWindowSize'
+import { useCallback, useEffect, useState } from 'react'
 
 const Header = (): JSX.Element => {
-  const [isOpen ,setIsOpen] = useState(false)
-  const { width } = useWindowSize();
+  const [isOpen, setIsOpen] = useState(false)
+  const { width } = useWindowSize()
 
-  console.log(width)
+  useEffect(() =>{
+    if (width >= 768) {
+      setIsOpen(true)
+    }
+    window.addEventListener('resize', () => {
+      if(width <= 768) {
+        setIsOpen(false)
+      } else if (width >= 768) {
+        setIsOpen(true)
+      }
+    })
+  }, [width, isOpen])
+
+  function handleClick() {
+    setIsOpen(!isOpen)
+    console.log(isOpen)
+  }
 
   return (
     <div
       className={
-        'bg-[#222222] pr-[2rem] pl-[2rem] flex flex-row items-center justify-between w-100 h-[94px] sticky font-lato'
+        'bg-[#222] pr-[2rem] pl-[2rem] pt-[0.5rem] flex flex-row items-center justify-between w-100 min-h-[94px] sticky font-lato flex-wrap md:flex-nowrap'
       }
     >
-      <div className="shrink-0 w-9 h-[43px] relative">
+      <div className="w-9 h-[43px]">
         <div className="font-montserrat text-white text-4xl font-bold">
           D<span className="text-maincolor">.</span>
         </div>
       </div>
-      <ul className="hidden md:flex flex-row gap-[3rem] items-center justify-center shrink-0 font-lato text-white">
-        <li>
+
+      <button
+        onClick={handleClick}
+        className="flex md:hidden border rounded-sm justify-center items-center"
+      >
+        <span className="menu-icon"></span>
+      </button>
+
+      {isOpen && (
+        <ul className={`w-[100%] flex flex-col m-4 gap-2 md:m-0 md:flex-row md:gap-[3rem] md:items-center md:justify-center md:w-auto font-lato text-white bg-[#222] ${isOpen ? 'animationDown' : ''}`}>
+        <li className='hover:text-maincolor transition-all'>
           <a href="/">HOME</a>
         </li>
-        <li>
+        <li className='hover:text-maincolor transition-all'>
           <a href="/">SOBRE</a>
         </li>
-        <li>
+        <li className='hover:text-maincolor transition-all'>
           <a href="/">SKILLS</a>
         </li>
-        <li>
+        <li className='hover:text-maincolor transition-all'>
           <a href="/">PROJETOS</a>
         </li>
       </ul>
+      )}
       <button className="bg-white rounded-[0.3rem] pt-[0.5rem] pr-4 pb-[0.5rem] pl-4 hidden md:flex flex-row gap-3 items-center align-middle justify-center font-lato font-bold">
         <svg
           className="w-[15px] h-4 overflow-visible"
@@ -47,7 +73,7 @@ const Header = (): JSX.Element => {
             fill="black"
           />
         </svg>
-          {'Contato'}
+        {'Contato'}
       </button>
     </div>
   )
