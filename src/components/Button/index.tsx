@@ -10,7 +10,7 @@ const Button = ({ children, type, size, onClick }: ButtonProps) => {
     <button
       type={type}
       onClick={onClick}
-      className={`bg-maincolor font-lato text-white rounded-md flex items-center justify-center gap-3 ${size === 'md' ? 'px-3.5 py-1.5' : 'px-4 py-2'}`}
+      className={`bg-maincolor font-lato text-white rounded-md flex items-center justify-center gap-3 ${size === 'md' ? 'px-3.5 py-1.5' : 'px-4 py-2'} hover:transition hover:brightness-110`}
     >
       {children}
     </button>
