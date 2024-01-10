@@ -8,10 +8,10 @@ const Sobre = () => {
       id="sobre"
       className="flex justify-center items-center align-middle w-100 min-h-[90vh] relative bg-[#FDFBFB]"
     >
-      <div className="flex justify-center items-center gap-10">
+      <div className="flex flex-col justify-center items-center gap-10 md:flex-row">
         <Image src="/Images/Sobre/foto.png" alt="" width={200} height={200} />
 
-        <div className="flex flex-col justify-center items-center w-[50%] gap-6">
+        <div className="flex flex-col justify-center items-center w-[90%] md:w-[50%] gap-6 ">
           <h2 className="font-montserrat font-bold text-center text-maincolor">
             Sobre
           </h2>
