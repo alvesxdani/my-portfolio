@@ -21,7 +21,6 @@ const Header = (): JSX.Element => {
 
   function handleClick() {
     setIsOpen(!isOpen)
-    console.log(isOpen)
   }
 
   return (
@@ -44,7 +43,7 @@ const Header = (): JSX.Element => {
       </button>
 
       {isOpen && (
-        <ul className={`w-[100%] flex flex-col m-4 gap-2 md:m-0 md:flex-row md:gap-[3rem] md:items-center md:justify-center md:w-auto font-lato text-white bg-[#222] text-center ${isOpen ? 'animationDown' : ''}`}>
+        <ul className={`w-[100%] flex flex-col m-4 gap-2 md:m-0 md:flex-row md:gap-[3rem] md:items-center md:justify-center md:w-auto font-opensans text-white bg-[#222] text-center text-sm ${isOpen ? 'animationDown' : ''}`}>
         <li className='hover:text-maincolor transition-all'>
           <a href="/">HOME</a>
         </li>

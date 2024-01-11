@@ -1,4 +1,5 @@
 import Intro from '@/components/Intro'
+import Projetos from '@/components/Projetos'
 import Skills from '@/components/Skills'
 import Sobre from '@/components/Sobre'
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Intro />
       <Sobre />
       <Skills />
+      <Projetos />
     </>
   )
 }
