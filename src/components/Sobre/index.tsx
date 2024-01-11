@@ -6,10 +6,10 @@ const Sobre = () => {
   return (
     <section
       id="sobre"
-      className="flex justify-center items-center align-middle w-100 h-auto relative bg-[#FDFBFB] sm:min-h-[90vh]"
+      className="flex justify-center items-center align-middle w-100 h-auto p-5 relative bg-[#FDFBFB] sm:min-h-[90vh]"
     >
       <div className="flex flex-col justify-center items-center gap-10 md:flex-row">
-        <Image src="/Images/Sobre/foto.png" alt="" width={200} height={200} />
+        <Image src="/Images/Sobre/foto.png" alt="Minha selfie" width={200} height={200} />
 
         <div className="flex flex-col justify-center items-center w-[90%] md:w-[50%] gap-6 ">
           <h2 className="font-montserrat font-bold text-center text-maincolor">

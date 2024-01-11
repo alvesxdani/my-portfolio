@@ -21,12 +21,12 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-10"
+      className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-5"
     >
       <h2 className="font-montserrat font-bold text-center text-maincolor">
         Skills
       </h2>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 break-words justify-center items-center gap-[3rem] border border-maincolor">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 break-words justify-center items-center gap-[3rem]">
         <FaHtml5 size={80} />
         <FaCss3Alt size={80} />
         <IoLogoJavascript size={80} />
