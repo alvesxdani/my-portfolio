@@ -10,7 +10,7 @@ type CardProps = {
 }
 const Card = ({ title, subtitle, text, linkGithub, linkDeploy }: CardProps) => {
   return (
-    <div className="bg-white rounded-[10px] shadow border border-neutral-100 flex-col inline-flex p-4 gap-4 justify-around">
+    <div className="bg-white rounded-[10px] shadow border border-neutral-100 flex-col inline-flex p-4 gap-4 justify-around w-[350px]">
       <div className="flex-col justify-start items-start gap-2 inline-flex">
         <h3 className="text-[#333] text-2xl font-bold font-montserrat">
           {title}
