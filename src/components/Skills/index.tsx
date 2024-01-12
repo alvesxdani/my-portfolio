@@ -27,21 +27,21 @@ const Skills = () => {
         Skills
       </h2>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 break-words justify-center items-center gap-[3rem]">
-        <FaHtml5 size={80} />
-        <FaCss3Alt size={80} />
-        <IoLogoJavascript size={80} />
-        <BiLogoTypescript size={90} />
-        <FaReact size={80} />
-        <SiNextdotjs size={80} />
-        <SiTailwindcss size={80} />
-        <FaSass size={80} />
-        <FaLess size={80} />
-        <FaBootstrap size={80} />
-        <BiLogoDjango size={80} />
-        <FaGitAlt size={80} />
-        <FaNpm size={80} />
-        <FaGulp size={80} />
-        <FaGrunt size={80} />
+        <FaHtml5 size={80} className="transition-colors hover:text-maincolor" />
+        <FaCss3Alt size={80} className="transition-colors hover:text-maincolor" />
+        <IoLogoJavascript size={80} className="transition-colors hover:text-maincolor" />
+        <BiLogoTypescript size={90} className="transition-colors hover:text-maincolor" />
+        <FaReact size={80} className="transition-colors hover:text-maincolor" />
+        <SiNextdotjs size={80} className="transition-colors hover:text-maincolor" />
+        <SiTailwindcss size={80} className="transition-colors hover:text-maincolor" />
+        <FaSass size={80} className="transition-colors hover:text-maincolor" />
+        <FaLess size={80} className="transition-colors hover:text-maincolor" />
+        <FaBootstrap size={80} className="transition-colors hover:text-maincolor" />
+        <BiLogoDjango size={80} className="transition-colors hover:text-maincolor" />
+        <FaGitAlt size={80} className="transition-colors hover:text-maincolor" />
+        <FaNpm size={80} className="transition-colors hover:text-maincolor" />
+        <FaGulp size={80} className="transition-colors hover:text-maincolor" />
+        <FaGrunt size={80} className="transition-colors hover:text-maincolor" />
       </div>
     </section>
   );
