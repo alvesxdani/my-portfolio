@@ -4,13 +4,14 @@ type ButtonProps = PropsWithChildren<{
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset' | undefined
   size: 'md' | 'lg'
+  mode?: "normal" | "outline"
 }>
-const Button = ({ children, type, size, onClick }: ButtonProps) => {
+const Button = ({ children, type, size, mode="normal", onClick }: ButtonProps) => {
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`bg-maincolor font-lato text-white rounded-md flex items-center justify-center gap-3 ${size === 'md' ? 'px-3.5 py-1.5' : 'px-4 py-2'} hover:transition hover:brightness-110`}
+      className={`font-lato rounded-md flex items-center justify-center gap-3 ${size === 'md' ? 'px-3.5 py-1.5' : 'px-4 py-2'} ${mode === 'normal' ? 'bg-maincolor text-white' : 'bg-transparent border border-maincolor text-maincolor'} hover:transition hover:brightness-110`}
     >
       {children}
     </button>
