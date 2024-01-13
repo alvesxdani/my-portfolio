@@ -20,7 +20,7 @@ const Intro = () => {
     };
   }, []);
   return (
-    <section id='intro' className="flex flex-col justify-center items-center w-100 h-[90vh] gap-3 text-center">
+    <section id='intro' className="flex flex-col justify-center items-center w-100 h-[90vh] gap-3 text-center p-4">
       <h1 className='font-montserrat font-bold'>Oi, meu nome é <span className="text-maincolor">Daniela</span>.</h1>
       <p className='uppercase text-lg font-lato text-bolder mb-3'>
       <span ref={el} />
