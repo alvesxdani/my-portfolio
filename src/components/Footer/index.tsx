@@ -1,14 +1,20 @@
+"use client"
 import React from 'react'
 import Logo from '../Logo'
 import { FaLinkedin } from 'react-icons/fa6'
 import { FaWhatsapp } from 'react-icons/fa6'
 import { FiGithub } from 'react-icons/fi'
+import useWindowSize from '@/Hooks/useWindowSize'
 
 const Footer = () => {
+  const {width} = useWindowSize()
+
   return (
-    <div className='bg-[#222] h-[240px] flex items-center align-middle justify-center gap-16'>
+    <div className='bg-[#222] md:h-[240px] flex flex-col md:flex-row items-center align-middle justify-center gap-10 md:gap-16 p-10'>
       <Logo />
-      <div className="h-[120px] w-[4px] bg-neutral-700"></div>
+      {width >= 768 && (
+        <div className="h-[120px] w-[4px] bg-neutral-700"></div>
+      )}
         <ul className='flex flex-col justify-around h-[120px] text-white text-lg font-bold font-lato'>
           <li><a href="/">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
