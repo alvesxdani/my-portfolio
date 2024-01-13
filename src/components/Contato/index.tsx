@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import { Input, TextArea } from '../Inputs'
 import emailjs from '@emailjs/browser'
+import { Input, TextArea } from '../Inputs'
 import Button from '../Button'
 import { FaLinkedin } from 'react-icons/fa6'
 import { FaWhatsapp } from 'react-icons/fa6'
@@ -30,7 +30,7 @@ const Contato = () => {
   //       );
   //   };
   return (
-    <section id='contato' className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-5">
+    <section id='contato' className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-10">
       <h2 className="font-montserrat font-bold text-center text-maincolor">
         Contato
       </h2>

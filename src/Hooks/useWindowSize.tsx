@@ -1,18 +1,25 @@
-import { useState, useEffect } from 'react';
+"use client"
+// hooks/useWindowSize.ts
+import { useEffect, useState } from 'react';
 
-const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
+interface WindowSize {
+  width: number;
+}
+
+const useWindowSize = (): WindowSize => {
+  const [windowSize, setWindowSize] = useState<WindowSize>({
+    width: typeof window !== 'undefined' ? window.innerWidth : 0,
   });
 
-  const handleResize = () => {
-    setWindowSize({
-      width: window.innerWidth,
-    });
-  };
-
   useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+      });
+    };
+
     window.addEventListener('resize', handleResize);
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -21,4 +28,4 @@ const useWindowSize = () => {
   return windowSize;
 };
 
-export default useWindowSize
+export default useWindowSize;
