@@ -1,4 +1,5 @@
 import Contato from '@/components/Contato'
+import Footer from '@/components/Footer'
 import Intro from '@/components/Intro'
 import Projetos from '@/components/Projetos'
 import Skills from '@/components/Skills'
@@ -12,6 +13,7 @@ export default function Home() {
       <Skills />
       <Projetos />
       <Contato />
+      <Footer />
     </>
   )
 }
