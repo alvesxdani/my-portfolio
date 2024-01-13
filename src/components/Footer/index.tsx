@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../Logo'
 import { FaLinkedin } from 'react-icons/fa6'
 import { FaWhatsapp } from 'react-icons/fa6'
@@ -8,13 +8,31 @@ import useWindowSize from '@/Hooks/useWindowSize'
 
 const Footer = () => {
   const {width} = useWindowSize()
+  const [show, setShow] = useState(true)
+
+  useEffect(() => {
+    function handleSize() {
+      if (width <= 976) {
+        setShow(false)
+      }
+      if (width >= 976) {
+        setShow(true)
+      }
+    }
+    if (typeof window !== 'undefined') {
+      handleSize(); // Executar a lógica apenas no lado do cliente
+      window.addEventListener('resize', handleSize);
+  
+      return () => {
+        window.removeEventListener('resize', handleSize);
+      };
+    }
+  }, [width])
 
   return (
-    <div className='bg-[#222] md:h-[240px] flex flex-col md:flex-row items-center align-middle justify-center gap-10 md:gap-16 p-10'>
+    <footer className='w-[100%] bg-[#222] flex flex-col items-center align-middle justify-center gap-10 p-10 lg:gap-16 lg:h-[240px] lg:flex-row box-border'>
       <Logo />
-      {width >= 768 && (
-        <div className="h-[120px] w-[4px] bg-neutral-700"></div>
-      )}
+        <div className="h-[120px] w-[4px] bg-neutral-700 hidden lg:block"></div>
         <ul className='flex flex-col justify-around h-[120px] text-white text-lg font-bold font-lato'>
           <li><a href="/">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
@@ -24,7 +42,7 @@ const Footer = () => {
           <p>Contato:</p>
           <a href='mailto:daniela.alvesm@outlook.com.br'>daniela.alvesm@outlook.com.br</a>
         </div>
-        <div className="flex flex-col justify-center items-center gap-5 text-white font-bold text-lg font-lato">
+        <div className="flex flex-col justify-center items-center gap-3 md:gap-5 text-white font-bold text-lg font-lato">
           <p>Encontre-me:</p>
           <div className="flex gap-16">
             <a href="http://linkedin.com/in/daniela-alvesm" target="_blank">
@@ -39,7 +57,7 @@ const Footer = () => {
           </div>
 
         </div>
-        </div>
+        </footer>
   )
 }
 
