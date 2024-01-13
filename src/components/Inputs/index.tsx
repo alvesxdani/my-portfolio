@@ -1,9 +1,9 @@
-import React, { PropsWithChildren } from "react";
+import React, { HTMLInputTypeAttribute } from "react";
 
 type InputProps = {
   id: string;
   label: string;
-  type: string
+  type: HTMLInputTypeAttribute
 };
 
 type TextAreaProps = {
