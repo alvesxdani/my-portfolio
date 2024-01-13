@@ -58,6 +58,7 @@ const Header = (): JSX.Element => {
         </li>
       </ul>
       )}
+      <a href="#contato">
       <button className="bg-white rounded-[0.3rem] pt-[0.5rem] pr-4 pb-[0.5rem] pl-4 hidden md:flex flex-row gap-3 items-center align-middle justify-center font-lato font-bold">
         <svg
           className="w-[15px] h-4 overflow-visible"
@@ -74,6 +75,7 @@ const Header = (): JSX.Element => {
         </svg>
         {'Contato'}
       </button>
+      </a>
     </div>
   )
 }

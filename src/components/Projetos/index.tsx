@@ -4,7 +4,7 @@ import { ProjetosLista } from './projetos-array'
 
 const Projetos = () => {
   return (
-    <div className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-5 bg-[#FDFBFB]">
+    <section id='projetos' className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-4 bg-[#FDFBFB]">
       <h2 className="font-montserrat font-bold text-center text-maincolor">
         Projetos
       </h2>
@@ -15,7 +15,7 @@ const Projetos = () => {
           )
         })}
       </div>
-    </div>
+    </section>
   )
 }
 
