@@ -19,7 +19,6 @@ const Header =  (): JSX.Element => {
       if (width >= 768) {
         setIsOpen(true)
       }
-      console.log(width)
     }
     if (typeof window !== 'undefined') {
       handleSize(); // Executar a lógica apenas no lado do cliente
