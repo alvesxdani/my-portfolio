@@ -11,7 +11,7 @@ const Button = ({ children, type, size, mode="normal", onClick }: ButtonProps) =
     <button
       type={type}
       onClick={onClick}
-      className={`font-lato rounded-md flex items-center justify-center gap-3 ${size === 'md' ? 'px-3.5 py-1.5' : 'px-4 py-2'} ${mode === 'normal' ? 'bg-maincolor text-white' : 'bg-transparent border border-maincolor text-maincolor'} hover:transition hover:brightness-110`}
+      className={`font-lato rounded-md flex items-center justify-center gap-3 ${size === 'md' ? 'px-3.5 py-1.5' : 'px-4 py-2'} ${mode === 'normal' ? 'bg-maincolor text-white' : 'bg-transparent border border-maincolor text-maincolor'} hover:transition hover:brightness-110 font-bold`}
     >
       {children}
     </button>
