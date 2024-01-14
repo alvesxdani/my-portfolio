@@ -11,6 +11,9 @@ import { FaAt } from 'react-icons/fa6'
 const Contato = () => {
   const form = useRef<HTMLFormElement>(null)
   const [btn, setBtn] = useState('Enviar')
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [msg, setMsg] = useState()
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
