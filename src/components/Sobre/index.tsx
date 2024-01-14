@@ -4,11 +4,12 @@ import React, { useEffect } from 'react'
 import Button from '../Button'
 import AOS from 'aos'
 
-const Sobre = () => {
 
+const Sobre = () => {
   useEffect(() => {
     AOS.init({
-      delay: 2000
+      delay: 200,
+      offset: 200,
     })
   },[])
   
@@ -21,7 +22,7 @@ const Sobre = () => {
         <Image src="/Images/Sobre/foto.png" alt="Minha selfie" width={200} height={200} />
 
         <div className="flex flex-col justify-center items-center w-[90%] md:w-[50%] gap-6 ">
-          <h2 className="font-montserrat font-bold text-center text-maincolor" data-aos="fade-down">
+          <h2 className="font-montserrat font-bold text-center text-maincolor" data-aos="fade-up">
             Sobre
           </h2>
           <p className="text-justify">

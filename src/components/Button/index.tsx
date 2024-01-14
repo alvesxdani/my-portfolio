@@ -1,11 +1,11 @@
-import React, { PropsWithChildren } from 'react'
+import React, { ButtonHTMLAttributes, PropsWithChildren } from 'react'
 
-type ButtonProps = PropsWithChildren<{
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset' | undefined
   size: 'md' | 'lg'
   mode?: "normal" | "outline"
-}>
+}
 const Button = ({ children, type, size, mode="normal", onClick }: ButtonProps) => {
   return (
     <button
