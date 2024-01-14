@@ -50,7 +50,7 @@ const Contato = () => {
         <form className="w-[100%] md:w-[40%]" onSubmit={sendEmail} ref={form}>
           <Input type="text" id="user_name" label="Nome" />
           <Input type="email" id="user_email" label="E-mail" />
-          <TextArea label="message" />
+          <TextArea label="Mensagem" id='message'/>
           <Button size="md" type="submit">
             {btn}
           </Button>

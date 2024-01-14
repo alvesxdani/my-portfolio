@@ -8,6 +8,7 @@ type InputProps = {
 
 type TextAreaProps = {
   label: string
+  id: string
 }
 
 const Input = ({ id, label, type }: InputProps) => {
@@ -26,7 +27,7 @@ const Input = ({ id, label, type }: InputProps) => {
   )
 }
 
-const TextArea = ({ label }: TextAreaProps) => {
+const TextArea = ({ label, id }: TextAreaProps) => {
   return (
     <div className="col col-flex mb-4">
       <label htmlFor="msg" className="font-lato font-bold">
@@ -34,7 +35,7 @@ const TextArea = ({ label }: TextAreaProps) => {
       </label>
       <textarea
         className="border border-slate-400 p-1 rounded-sm focus:border-maincolor focus:border-2 focus:outline-none hover:border-maincolor w-[100%]"
-        id={label} name={label}
+        id={id} name={id}
         rows={10}
       />
     </div>
