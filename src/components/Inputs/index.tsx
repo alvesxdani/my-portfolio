@@ -11,7 +11,7 @@ type TextAreaProps = InputHTMLAttributes<HTMLTextAreaElement> & {
   id: string
 }
 
-const Input = ({ id, label, type }: InputProps) => {
+const Input = ({ id, label, type, onChange, value }: InputProps) => {
   return (
     <div className="flex flex-col gap-1 mb-4">
       <label htmlFor={id} className="font-lato font-bold">
@@ -22,12 +22,14 @@ const Input = ({ id, label, type }: InputProps) => {
         name={id}
         id={id}
         className="border border-slate-400 p-1 rounded-sm focus:border-maincolor focus:border-2 focus:outline-none hover:border-maincolor"
+        value={value}
+        onChange={onChange}
       />
     </div>
   )
 }
 
-const TextArea = ({ label, id }: TextAreaProps) => {
+const TextArea = ({ label, id, onChange, value }: TextAreaProps) => {
   return (
     <div className="col col-flex mb-4">
       <label htmlFor="msg" className="font-lato font-bold">
@@ -37,6 +39,8 @@ const TextArea = ({ label, id }: TextAreaProps) => {
         className="border border-slate-400 p-1 rounded-sm focus:border-maincolor focus:border-2 focus:outline-none hover:border-maincolor w-[100%]"
         id={id} name={id}
         rows={10}
+        value={value}
+        onChange={onChange}
       />
     </div>
   )

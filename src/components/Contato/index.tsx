@@ -19,7 +19,9 @@ const Contato = () => {
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setBtn('Enviando...')
-    if(name.length>0 && email.length>0 && msg.length>0) {
+
+    if(name.length > 0 && email.length > 0 && msg.length > 0) {
+      setError('')
       emailjs
       .sendForm(
         'service_felgnko',
@@ -36,13 +38,19 @@ const Contato = () => {
         },
       )
       .finally(() => {
+        setName('')
+        setEmail('')
+        setMsg('')
         setBtn('Enviado!')
       })
     }
-    if(!name.length || !email.length || !msg.length) {
+    if(name.length <= 0 || email.length <= 0 || msg.length <= 0) {
       setBtn('Enviar')
-      setError("Preencha todos os campos")
+      setError("Preencha todos os campos.")
     }
+    console.log(name.length)
+    console.log(email.length)
+    console.log(msg.length)
   }
 
   return (
@@ -56,9 +64,9 @@ const Contato = () => {
 
       <div className="flex flex-col-reverse md:flex-row w-[100%] gap-10 justify-center align-middle">
         <form className="w-[100%] md:w-[40%]" onSubmit={sendEmail} ref={form}>
-          <Input type="text" id="user_name" label="Nome" value={name} onClick={({currentTarget}) => setName(currentTarget.value)} />
-          <Input type="email" id="user_email" label="E-mail" value={email} onClick={({currentTarget}) => setEmail(currentTarget.value)} />
-          <TextArea label="Mensagem" id='message' value={msg} onClick={({currentTarget}) => setMsg(currentTarget.value)} />
+          <Input type="text" id="user_name" label="Nome" value={name} onChange={({target}) => setName(target.value)} />
+          <Input type="email" id="user_email" label="E-mail" value={email} onChange={({target}) => setEmail(target.value)} />
+          <TextArea label="Mensagem" id='message' value={msg} onChange={({target}) => setMsg(target.value)} />
           {error && (<p className='text-maincolor mb-3'>{error}</p>)}
           <Button size="md" type="submit">
             {btn}
