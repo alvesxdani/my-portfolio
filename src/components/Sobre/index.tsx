@@ -1,8 +1,17 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../Button'
+import AOS from 'aos'
 
 const Sobre = () => {
+
+  useEffect(() => {
+    AOS.init({
+      delay: 2000
+    })
+  },[])
+  
   return (
     <section
       id="sobre"
@@ -12,7 +21,7 @@ const Sobre = () => {
         <Image src="/Images/Sobre/foto.png" alt="Minha selfie" width={200} height={200} />
 
         <div className="flex flex-col justify-center items-center w-[90%] md:w-[50%] gap-6 ">
-          <h2 className="font-montserrat font-bold text-center text-maincolor">
+          <h2 className="font-montserrat font-bold text-center text-maincolor" data-aos="fade-down">
             Sobre
           </h2>
           <p className="text-justify">
