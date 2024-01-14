@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, PropsWithChildren } from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   onClick?: () => void
