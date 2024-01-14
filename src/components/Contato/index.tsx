@@ -1,7 +1,5 @@
-import React, {
-  FormEvent,
-  useRef,
-} from 'react'
+'use client'
+import React, { FormEvent, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { Input, TextArea } from '../Inputs'
 import Button from '../Button'
@@ -12,25 +10,31 @@ import { FaAt } from 'react-icons/fa6'
 
 const Contato = () => {
   const form = useRef<HTMLFormElement>(null)
+  const [btn, setBtn] = useState('Enviar')
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    setBtn('Enviando...')
+
     emailjs
       .sendForm(
         'service_felgnko',
-        'YOUR_TEMPLATE_ID',
+        'template_31pelei',
         e.currentTarget,
-        'YOUR_PUBLIC_KEY',
+        '4VQ7DIqu-yhhnT3CK',
       )
       .then(
         (result) => {
-          console.log(result.text)
+          console.log(result.status)
         },
         (error) => {
           console.log(error.text)
         },
       )
+      .finally(() => {
+        setBtn('Enviado!')
+      })
   }
 
   return (
@@ -46,10 +50,9 @@ const Contato = () => {
         <form className="w-[100%] md:w-[40%]" onSubmit={sendEmail} ref={form}>
           <Input type="text" id="user_name" label="Nome" />
           <Input type="email" id="user_email" label="E-mail" />
-          <Input type='text' id="reply_to" label='Reply to:' />
           <TextArea label="message" />
           <Button size="md" type="submit">
-            Enviar
+            {btn}
           </Button>
         </form>
         <div className="w-[100%] md:w-[40%] flex flex-col gap-3">
