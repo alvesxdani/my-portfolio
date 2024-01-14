@@ -1,12 +1,12 @@
-import React, { HTMLInputTypeAttribute } from 'react'
+import React, { HTMLInputTypeAttribute, InputHTMLAttributes } from 'react'
 
-type InputProps = {
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   id: string
   label: string
   type: HTMLInputTypeAttribute
 }
 
-type TextAreaProps = {
+type TextAreaProps = InputHTMLAttributes<HTMLTextAreaElement> & {
   label: string
   id: string
 }
