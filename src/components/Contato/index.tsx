@@ -70,7 +70,7 @@ const Contato = () => {
       </h2>
 
       <div className="flex flex-col-reverse md:flex-row w-[100%] gap-10 justify-center align-middle">
-        <form className="w-[100%] md:w-[40%]" onSubmit={sendEmail} ref={form} data-aos="slide-up">
+        <form className="w-[100%] md:w-[40%]" onSubmit={sendEmail} ref={form} data-aos="fade-up">
           <Input type="text" id="user_name" label="Nome" value={name} onChange={({target}) => setName(target.value)} />
           <Input type="email" id="user_email" label="E-mail" value={email} onChange={({target}) => setEmail(target.value)} />
           <TextArea label="Mensagem" id='message' value={msg} onChange={({target}) => setMsg(target.value)} />
