@@ -8,6 +8,7 @@ import AOS from 'aos'
 const Sobre = () => {
   useEffect(() => {
     AOS.init({
+      delay: -80,
       duration: 1000,
     })
   },[])
@@ -32,7 +33,7 @@ const Sobre = () => {
             continuar aprimorando minhas habilidades e contribuir para projetos
             desafiadores.
           </p>
-          <a href="https://www.canva.com/design/DAE_M3zLeaQ/scdLlFZRwZoNEXjHB23DuQ/view?utm_content=DAE_M3zLeaQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1" target='_blank' data-aos="fade-in">
+          <a href="https://drive.google.com/file/d/1xB86KF4Vw8SFMan0Y6voEwHacyehqXqx/view?usp=drivesdk" target='_blank' data-aos="fade-in">
             <Button size="lg" type="button">
               <Image
                 src="/Images/Sobre/download.png"
