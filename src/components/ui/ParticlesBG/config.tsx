@@ -39,7 +39,7 @@ export const configParticles = {
     },
     move: {
       enable: true,
-      speed: 6,
+      speed: 3,
     },
   },
   interactivity: {
