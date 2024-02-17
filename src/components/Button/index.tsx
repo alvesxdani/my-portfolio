@@ -1,12 +1,12 @@
 import React, { ButtonHTMLAttributes } from 'react'
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonT = ButtonHTMLAttributes<HTMLButtonElement> & {
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset' | undefined
   size: 'md' | 'lg'
   mode?: "normal" | "outline"
 }
-const Button = ({ children, type, size, mode="normal", onClick }: ButtonProps) => {
+const Button = ({ children, type, size, mode="normal", onClick }: ButtonT) => {
   return (
     <button
       type={type}
