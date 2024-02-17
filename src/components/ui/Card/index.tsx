@@ -23,10 +23,10 @@ const Card = ({ title, subtitle, text, linkGithub, linkDeploy }: CardProps) => {
         <p>{text}</p>
       </div>
       <div className="justify-start items-start gap-2 inline-flex">
-        <a href={linkGithub}>
+        <a href={linkGithub} target='_blank'>
           <Button size="md">GitHub</Button>
         </a>
-        <a href={linkDeploy}>
+        <a href={linkDeploy} target='_blank'>
           <Button size="md" mode="outline">
             Deploy
           </Button>
