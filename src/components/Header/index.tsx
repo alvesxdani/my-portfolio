@@ -33,7 +33,7 @@ const Header = (): JSX.Element => {
   return (
     <header
       className={
-        'bg-[#222] px-[2rem] pt-[0.5rem] flex flex-row items-center justify-between w-full min-h-[94px] sticky top-0 font-lato flex-wrap md:flex-nowrap z-50'
+        'bg-[#222] px-[3rem] pt-[0.5rem] flex flex-row items-center justify-between w-full min-h-[94px] sticky top-0 font-lato flex-wrap md:flex-nowrap z-50'
       }
     >
       <div className="w-9 h-[43px]">
