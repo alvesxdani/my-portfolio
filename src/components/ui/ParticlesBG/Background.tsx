@@ -41,7 +41,7 @@ const Background = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className='border'
+        className='w-[100%]'
       />
     )
   }
