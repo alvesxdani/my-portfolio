@@ -27,7 +27,6 @@ const Intro = () => {
     }
   }, [])
 
-  AOS
   return (
     <section
       id="intro"
