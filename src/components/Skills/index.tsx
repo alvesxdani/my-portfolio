@@ -17,6 +17,8 @@ import { FaGitAlt } from 'react-icons/fa6'
 import { FaNpm } from 'react-icons/fa6'
 import { FaGulp } from 'react-icons/fa6'
 import { FaGrunt } from 'react-icons/fa6'
+import { SiBabel } from 'react-icons/si'
+import { FaVuejs } from 'react-icons/fa6'
 import AOS from 'aos'
 
 const Skills = () => {
@@ -30,10 +32,16 @@ const Skills = () => {
       id="skills"
       className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-5"
     >
-      <h2 className="font-montserrat font-bold text-center text-maincolor" data-aos="fade-up">
+      <h2
+        className="font-montserrat font-bold text-center text-maincolor"
+        data-aos="fade-up"
+      >
         Skills
       </h2>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 break-words justify-center items-center gap-[3rem]" data-aos="fade-right">
+      <div
+        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 break-words justify-center items-center gap-[3rem]"
+        data-aos="fade-right"
+      >
         <FaHtml5 size={80} className="transition-colors hover:text-maincolor" />
         <FaCss3Alt
           size={80}
@@ -52,6 +60,7 @@ const Skills = () => {
           size={80}
           className="transition-colors hover:text-maincolor"
         />
+        <FaVuejs size={80} className="transition-colors hover:text-maincolor" />
         <SiTailwindcss
           size={80}
           className="transition-colors hover:text-maincolor"
@@ -73,6 +82,7 @@ const Skills = () => {
         <FaNpm size={80} className="transition-colors hover:text-maincolor" />
         <FaGulp size={80} className="transition-colors hover:text-maincolor" />
         <FaGrunt size={80} className="transition-colors hover:text-maincolor" />
+        <SiBabel size={80} className="transition-colors hover:text-maincolor" />
       </div>
     </section>
   )
