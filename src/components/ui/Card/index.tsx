@@ -20,18 +20,16 @@ const Card = ({ title, subtitle, text, linkGithub, linkDeploy }: CardProps) => {
         </p>
       </div>
       <div className="flex-col justify-between items-start align-middle inline-flex text-justify">
-        <p>
-          {text}
-        </p>
+        <p>{text}</p>
       </div>
       <div className="justify-start items-start gap-2 inline-flex">
         <a href={linkGithub}>
-        <Button size="md">GitHub</Button>
+          <Button size="md">GitHub</Button>
         </a>
         <a href={linkDeploy}>
-        <Button size="md" mode="outline">
-          Deploy
-        </Button>
+          <Button size="md" mode="outline">
+            Deploy
+          </Button>
         </a>
       </div>
     </div>

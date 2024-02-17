@@ -1,5 +1,5 @@
 import Contato from '@/components/Contato'
-import Footer from '@/components/Footer'
+import Footer from '@/components/ui/Footer'
 import Intro from '@/components/Intro'
 import Projetos from '@/components/Projetos'
 import Skills from '@/components/Skills'

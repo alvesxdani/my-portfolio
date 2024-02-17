@@ -2,7 +2,7 @@
 import React, { FormEvent, useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { Input, TextArea } from '../Inputs'
-import Button from '../Button'
+import Button from '../ui/Button'
 import { FaLinkedin } from 'react-icons/fa6'
 import { FaWhatsapp } from 'react-icons/fa6'
 import { FiGithub } from 'react-icons/fi'
@@ -27,33 +27,33 @@ const Contato = () => {
     e.preventDefault()
     setBtn('Enviando...')
 
-    if(name.length > 0 && email.length > 0 && msg.length > 0) {
+    if (name.length > 0 && email.length > 0 && msg.length > 0) {
       setError('')
       emailjs
-      .sendForm(
-        'service_felgnko',
-        'template_31pelei',
-        e.currentTarget,
-        '4VQ7DIqu-yhhnT3CK',
-      )
-      .then(
-        (result) => {
-          console.log(result.status)
-        },
-        (error) => {
-          console.log(error.text)
-        },
-      )
-      .finally(() => {
-        setName('')
-        setEmail('')
-        setMsg('')
-        setBtn('Enviado!')
-      })
+        .sendForm(
+          'service_felgnko',
+          'template_31pelei',
+          e.currentTarget,
+          '4VQ7DIqu-yhhnT3CK',
+        )
+        .then(
+          (result) => {
+            console.log(result.status)
+          },
+          (error) => {
+            console.log(error.text)
+          },
+        )
+        .finally(() => {
+          setName('')
+          setEmail('')
+          setMsg('')
+          setBtn('Enviado!')
+        })
     }
-    if(name.length <= 0 || email.length <= 0 || msg.length <= 0) {
+    if (name.length <= 0 || email.length <= 0 || msg.length <= 0) {
       setBtn('Enviar')
-      setError("Preencha todos os campos.")
+      setError('Preencha todos os campos.')
     }
     console.log(name.length)
     console.log(email.length)
@@ -65,21 +65,49 @@ const Contato = () => {
       id="contato"
       className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-10"
     >
-      <h2 className="font-montserrat font-bold text-center text-maincolor" data-aos="fade-in">
+      <h2
+        className="font-montserrat font-bold text-center text-maincolor"
+        data-aos="fade-in"
+      >
         Contato
       </h2>
 
       <div className="flex flex-col-reverse md:flex-row w-[100%] gap-10 justify-center align-middle">
-        <form className="w-[100%] md:w-[40%]" onSubmit={sendEmail} ref={form} data-aos="fade-up">
-          <Input type="text" id="user_name" label="Nome" value={name} onChange={({target}) => setName(target.value)} />
-          <Input type="email" id="user_email" label="E-mail" value={email} onChange={({target}) => setEmail(target.value)} />
-          <TextArea label="Mensagem" id='message' value={msg} onChange={({target}) => setMsg(target.value)} />
-          {error && (<p className='text-maincolor mb-3'>{error}</p>)}
+        <form
+          className="w-[100%] md:w-[40%]"
+          onSubmit={sendEmail}
+          ref={form}
+          data-aos="fade-up"
+        >
+          <Input
+            type="text"
+            id="user_name"
+            label="Nome"
+            value={name}
+            onChange={({ target }) => setName(target.value)}
+          />
+          <Input
+            type="email"
+            id="user_email"
+            label="E-mail"
+            value={email}
+            onChange={({ target }) => setEmail(target.value)}
+          />
+          <TextArea
+            label="Mensagem"
+            id="message"
+            value={msg}
+            onChange={({ target }) => setMsg(target.value)}
+          />
+          {error && <p className="text-maincolor mb-3">{error}</p>}
           <Button size="md" type="submit">
             {btn}
           </Button>
         </form>
-        <div className="w-[100%] md:w-[40%] flex flex-col gap-3" data-aos="fade-down">
+        <div
+          className="w-[100%] md:w-[40%] flex flex-col gap-3"
+          data-aos="fade-down"
+        >
           <h3 className="font-bold">Outros contatos: </h3>
           <div className="flex gap-5">
             <a href="http://linkedin.com/in/daniela-alvesm" target="_blank">

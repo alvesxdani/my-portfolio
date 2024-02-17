@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect } from 'react'
 import Typed from 'typed.js'
-import Button from '../Button'
+import Button from '../ui/Button'
 import Image from 'next/image'
 import AOS from 'aos'
-import 'aos/dist/aos.css';
+import 'aos/dist/aos.css'
 
 const Intro = () => {
   const el = React.useRef(null)
@@ -31,7 +31,8 @@ const Intro = () => {
   return (
     <section
       id="intro"
-      className="flex flex-col justify-center items-center w-100 h-[90vh] gap-3 text-center p-4" data-aos="fade-up"
+      className="flex flex-col justify-center items-center w-100 h-[90vh] gap-3 text-center p-4"
+      data-aos="fade-up"
     >
       <h1 className="font-montserrat font-bold" data-aos="fade-down">
         Olá, meu nome é <span className="text-maincolor">Daniela</span>.
