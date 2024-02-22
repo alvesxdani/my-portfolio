@@ -15,7 +15,7 @@ export const ProjetosLista = [
   },
   {
     title: 'Cartão interativo',
-    subtitle: 'React - Typescript - React-Hook-Forms - Yup - React-Text-Mask',
+    subtitle: 'React - Typescript - Styled Components - React-Hook-Forms - Yup - React-Text-Mask',
     text: 'Este é um projeto de uma página interativa, onde o usuário coloca seus dados do cartão, onde aparecerá na tela. O projeto é um desafio do Front End Mentor.',
     github: 'https://github.com/alvesxdani/interactive-card',
     deploy: 'https://alvesxdani.github.io/interactive-card/',
