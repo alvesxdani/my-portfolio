@@ -1,7 +1,7 @@
 export const ProjetosLista = [
   {
     title: 'Desafio Técnico 1',
-    subtitle: 'Next - TypeScript - Emailjs - Dark Mode',
+    subtitle: 'Next - TypeScript - TailwindCSS - Emailjs - Dark Mode',
     text: 'Este é o projeto de um desafio que realizei para um teste técnico, uma aplicação web desenvolvida utilizando Next.js, TypeScript, Tailwind CSS e outras tecnologias. Possui validação básica de formulário, animações e dark mode',
     github: 'https://github.com/alvesxdani/desafio-varos',
     deploy: 'https://desafio-varos.vercel.app/',
