@@ -1,5 +1,11 @@
 export const ProjetosLista = [
   {
+    title: 'Desafio Técnico 2',
+    subtitle: 'Vue 2 - Vuex - Awesome API - Axios - Json Server',
+    text: 'Este é o projeto de um sistema que cadastra uma carteira de clientes e seus investimentos para converter em Bitcoin. A paginação foi feita de forma que não realize re-renders da API.',
+    github: 'https://github.com/alvesxdani/desafio-frontend-oliveira-trust',
+  },
+  {
     title: 'Agenda de contatos',
     subtitle:
       'React - Typescript - Redux - Firebase - Firestore - Yup - React Hook Form - Styled-Components - React-Router-Dom',
