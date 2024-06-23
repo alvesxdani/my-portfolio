@@ -1,25 +1,22 @@
 'use client'
-import React, { useEffect } from 'react'
-
-// Icons import
-import { FaHtml5 } from 'react-icons/fa6'
-import { FaCss3Alt } from 'react-icons/fa6'
-import { IoLogoJavascript } from 'react-icons/io5'
-import { BiLogoTypescript } from 'react-icons/bi'
-import { FaReact } from 'react-icons/fa6'
-import { SiNextdotjs } from 'react-icons/si'
-import { SiTailwindcss } from 'react-icons/si'
-import { FaSass } from 'react-icons/fa6'
-import { FaLess } from 'react-icons/fa6'
-import { FaBootstrap } from 'react-icons/fa6'
-import { BiLogoDjango } from 'react-icons/bi'
-import { FaGitAlt } from 'react-icons/fa6'
-import { FaNpm } from 'react-icons/fa6'
-import { FaGulp } from 'react-icons/fa6'
-import { FaGrunt } from 'react-icons/fa6'
-import { SiBabel } from 'react-icons/si'
-import { FaVuejs } from 'react-icons/fa6'
 import AOS from 'aos'
+import { useEffect } from 'react'
+import { BiLogoJquery, BiLogoTypescript } from 'react-icons/bi'
+import {
+  FaBootstrap,
+  FaGitAlt,
+  FaGrunt,
+  FaGulp,
+  FaHtml5,
+  FaLess,
+  FaNpm,
+  FaReact,
+  FaSass,
+  FaVuejs,
+} from 'react-icons/fa6'
+import { IoLogoCss3, IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5'
+import { SiBabel, SiCypress, SiJest, SiNextdotjs, SiRedux, SiTailwindcss, SiWebpack } from 'react-icons/si'
+import CardIcon from '../ui/CardIcon'
 
 const Skills = () => {
   useEffect(() => {
@@ -30,7 +27,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col justify-center items-center align-middle w-100 min-h-[90vh] gap-[5rem] p-5"
+      className="flex flex-col justify-center items-center w-100 min-h-[90vh] gap-[6rem] p-5"
     >
       <h2
         className="font-montserrat font-bold text-center text-maincolor"
@@ -38,52 +35,39 @@ const Skills = () => {
       >
         Skills
       </h2>
-      <div
-        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 break-words justify-center items-center gap-[3rem]"
-        data-aos="fade-right"
-      >
-        <FaHtml5 size={80} className="transition-colors hover:text-maincolor" />
-        <FaCss3Alt
-          size={80}
-          className="transition-colors hover:text-maincolor"
-        />
-        <IoLogoJavascript
-          size={80}
-          className="transition-colors hover:text-maincolor"
-        />
-        <BiLogoTypescript
-          size={90}
-          className="transition-colors hover:text-maincolor"
-        />
-        <FaReact size={80} className="transition-colors hover:text-maincolor" />
-        <SiNextdotjs
-          size={80}
-          className="transition-colors hover:text-maincolor"
-        />
-        <FaVuejs size={80} className="transition-colors hover:text-maincolor" />
-        <SiTailwindcss
-          size={80}
-          className="transition-colors hover:text-maincolor"
-        />
-        <FaSass size={80} className="transition-colors hover:text-maincolor" />
-        <FaLess size={80} className="transition-colors hover:text-maincolor" />
-        <FaBootstrap
-          size={80}
-          className="transition-colors hover:text-maincolor"
-        />
+
+      <CardIcon
+        icons={[
+          <FaHtml5 key={'HTML5'} />,
+          <IoLogoCss3 key={'CSS3'} />,
+          <IoLogoJavascript key={'Javascript'} />,
+          <BiLogoTypescript key={'Typescript'} />,
+          <FaReact key={'ReactJS'} />,
+          <SiNextdotjs key={'NextJS'} />,
+          <FaVuejs key={'VueJS'} />,
+          <BiLogoJquery key={'jQuery'} />,
+          <FaSass key={'SASS'} />,
+          <FaLess key={'LESS'} />,
+          <SiTailwindcss key={'TailwindCSS'} />,
+          <FaBootstrap key={'Bootstrap'} />,
+          <FaGitAlt key={'Git'} />,
+          <FaNpm key={'NPM'} />,
+          <FaGulp key={'GULP'} />,
+          <FaGrunt key={'GRUNT'} />,
+          <SiBabel key={'Babel'} />,
+          <SiWebpack key={'Webpack'} />,
+          <SiRedux key={'Redux'} />,
+          <SiJest key={'Jest'} />,
+          <SiCypress key={'Cypress'} />,
+          <IoLogoFirebase key={'Firebase'} />,
+        ]}
+      />
+
+      {/*
         <BiLogoDjango
           size={80}
           className="transition-colors hover:text-maincolor"
-        />
-        <FaGitAlt
-          size={80}
-          className="transition-colors hover:text-maincolor"
-        />
-        <FaNpm size={80} className="transition-colors hover:text-maincolor" />
-        <FaGulp size={80} className="transition-colors hover:text-maincolor" />
-        <FaGrunt size={80} className="transition-colors hover:text-maincolor" />
-        <SiBabel size={80} className="transition-colors hover:text-maincolor" />
-      </div>
+        />*/}
     </section>
   )
 }
