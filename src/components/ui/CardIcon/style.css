@@ -1,0 +1,26 @@
+.mySwiper {
+  width: 100%;
+}
+
+.swiper {
+  width: 340px;
+  height: 420px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 10rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: #A80000;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #333;
+}
