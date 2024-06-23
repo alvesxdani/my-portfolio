@@ -9,6 +9,8 @@
 
 .swiper-slide {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
   border-radius: 18px;
