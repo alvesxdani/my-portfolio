@@ -5,7 +5,7 @@ export const configParticles = {
   name: 'Basic',
   particles: {
     number: {
-      value: 80,
+      value: 150,
       density: {
         enable: true,
       },
