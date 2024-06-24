@@ -49,7 +49,7 @@ export const configParticles = {
         mode: 'repulse',
       },
       onClick: {
-        enable: true,
+        enable: false,
         mode: 'push',
       },
     },
