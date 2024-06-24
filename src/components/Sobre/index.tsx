@@ -34,12 +34,15 @@ const Sobre = () => {
             Sobre
           </h2>
           <p className="text-justify" data-aos="fade-left">
-            Sou uma desenvolvedora front-end com mais de um ano de experiência,
-            especializada em React, TypeScript e Next.js. Tenho conhecimentos em
-            Figma e priorizo códigos reutilizáveis, sempre buscando aderir aos
-            princípios de Clean code e Clean architecture. Estou comprometida em
-            continuar aprimorando minhas habilidades e contribuir para projetos
-            desafiadores.
+            Olá, meu nome é Daniela, sou formada em Análise e Desenvolvimento de
+            Sistemas pelo Centro Universitário Carioca e atualmente cursando
+            Desenvolvedor Full Stack na EBAC. Sou uma profissional com perfil
+            comunicativo, autodidata e proativo. Estou em transição de carreira
+            e tenho experiência em React, TypeScript, NextJS, além de
+            habilidades em integração de APIs, JSON, Redux, Tailwind CSS,
+            Responsividade e SEO. Participei de um projeto voluntário como
+            Desenvolvedora Front-End, construindo uma plataforma de cursos
+            gratuitos para mulheres que desejam ingressar na área de UI/UX.
           </p>
           <a
             href="https://drive.google.com/file/d/1xB86KF4Vw8SFMan0Y6voEwHacyehqXqx/view?usp=drivesdk"
