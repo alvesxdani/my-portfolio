@@ -6,7 +6,7 @@ type CardProps = {
   subtitle: string
   text: string
   linkGithub: string
-  linkDeploy: string
+  linkDeploy: string | undefined
 }
 const Card = ({ title, subtitle, text, linkGithub, linkDeploy }: CardProps) => {
   return (
